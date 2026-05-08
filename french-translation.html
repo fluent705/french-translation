@@ -1,0 +1,1705 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>French Translation Service | Meliora Translation Services</title>
+    <meta name="description"
+        content="Professional French translation services for legal, medical transcreation, marketing transcreation, and literary documents. Accurate, culturally fluent, and delivered on time by Meliora Translation Services." />
+    <meta name="keywords"
+        content="French translation service, English to French translation, French to English translation, legal French translation, medical French transcreation, marketing French transcreation, real estate French translation" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap"
+        rel="stylesheet" />
+
+    <style>
+        :root {
+            --cream: #FAF7F2;
+            --parchment: #F3EDE3;
+            --navy: #1C2B3A;
+            --navy-mid: #2D4459;
+            --gold: #B8935A;
+            --gold-light: #D4AC76;
+            --rose-grey: #C5B8B0;
+            --ink: #2A2520;
+            --muted: #7A6E68;
+            --white: #FFFFFF;
+            --border: rgba(184, 147, 90, 0.25);
+            --font-display: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'Jost', sans-serif;
+            --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+            --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--cream);
+            color: var(--ink);
+            font-family: var(--font-body);
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 1.75;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: var(--gold);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--navy);
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            z-index: 999;
+            pointer-events: none;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+            opacity: 0.4;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.75s var(--ease-out), transform 0.75s var(--ease-out);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: none;
+        }
+
+        /* NAV */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(250, 247, 242, 0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 clamp(1.5rem, 5vw, 4rem);
+            height: 68px;
+        }
+
+        .nav-logo {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            color: var(--navy);
+            text-decoration: none;
+        }
+
+        .nav-logo span {
+            color: var(--gold);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.78rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--navy-mid);
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .nav-cta {
+            font-size: 0.78rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            background: var(--navy);
+            color: var(--white) !important;
+            padding: 0.55rem 1.4rem;
+            text-decoration: none !important;
+            font-weight: 400;
+            transition: background 0.2s;
+            display: inline-block;
+        }
+
+        .nav-cta:hover {
+            background: var(--gold) !important;
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+            z-index: 1000;
+        }
+
+        .mobile-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--navy);
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+
+        .nav-overlay {
+            position: fixed;
+            inset: 0;
+            background: var(--cream);
+            z-index: 99;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s var(--ease-out);
+        }
+
+        .nav-overlay.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .nav-overlay ul {
+            list-style: none;
+            text-align: center;
+        }
+
+        .nav-overlay li {
+            margin: 1.5rem 0;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .nav-overlay.active li {
+            animation: fadeUp 0.5s forwards;
+        }
+
+        .nav-overlay.active li:nth-child(1) { animation-delay: 0.1s; }
+        .nav-overlay.active li:nth-child(2) { animation-delay: 0.2s; }
+        .nav-overlay.active li:nth-child(3) { animation-delay: 0.3s; }
+        .nav-overlay.active li:nth-child(4) { animation-delay: 0.4s; }
+
+        .nav-overlay a {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            color: var(--navy);
+            text-decoration: none;
+            font-weight: 300;
+        }
+
+        /* HERO */
+        .hero {
+            position: relative;
+            min-height: 92vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            overflow: hidden;
+        }
+
+        .hero-left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: clamp(3rem, 8vw, 7rem) clamp(2rem, 5vw, 5rem);
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.72rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            animation: fadeUp 0.7s 0.2s var(--ease-out) forwards;
+        }
+
+        .hero-eyebrow::before {
+            content: '';
+            display: block;
+            width: 2.5rem;
+            height: 1px;
+            background: var(--gold);
+        }
+
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(3rem, 6vw, 5.5rem);
+            font-weight: 300;
+            line-height: 1.05;
+            letter-spacing: -0.01em;
+            color: var(--navy);
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            animation: fadeUp 0.8s 0.35s var(--ease-out) forwards;
+        }
+
+        .hero h1 em {
+            font-style: italic;
+            color: var(--gold);
+            font-weight: 300;
+        }
+
+        .hero-desc {
+            font-size: 1.05rem;
+            color: var(--muted);
+            line-height: 1.8;
+            max-width: 46ch;
+            margin-bottom: 2.5rem;
+            opacity: 0;
+            animation: fadeUp 0.8s 0.5s var(--ease-out) forwards;
+        }
+
+        .hero-actions {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            opacity: 0;
+            animation: fadeUp 0.8s 0.65s var(--ease-out) forwards;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: var(--navy);
+            color: var(--white);
+            padding: 1rem 2.4rem;
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: 400;
+            transition: background 0.25s, transform 0.2s;
+        }
+
+        .btn-primary:hover {
+            background: var(--gold);
+            color: var(--white);
+            transform: translateY(-1px);
+        }
+
+        .btn-ghost {
+            font-size: 0.8rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--navy);
+            text-decoration: none;
+            font-weight: 400;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            border-bottom: 1px solid var(--navy);
+            padding-bottom: 2px;
+            transition: color 0.2s, border-color 0.2s;
+        }
+
+        .btn-ghost:hover {
+            color: var(--gold);
+            border-color: var(--gold);
+        }
+
+        .hero-deco {
+            position: absolute;
+            right: -2rem;
+            bottom: -3rem;
+            z-index: 1;
+            font-family: var(--font-display);
+            font-size: 28rem;
+            line-height: 1;
+            color: rgba(28, 43, 58, 0.04);
+            font-weight: 600;
+            user-select: none;
+            pointer-events: none;
+            letter-spacing: -0.05em;
+        }
+
+        .hero-right {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--navy) 0%, #0e1c28 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: clamp(2rem, 5vw, 4rem);
+        }
+
+        .hero-right::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: linear-gradient(rgba(184, 147, 90, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(184, 147, 90, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+
+        .hero-quote {
+            position: relative;
+            width: 100%;
+            max-width: 460px;
+            padding: 0 0 0 2.5rem;
+            color: var(--white);
+            border-left: 2px solid var(--gold);
+            opacity: 0;
+            animation: fadeUp 1s 0.6s var(--ease-out) forwards;
+            z-index: 5;
+        }
+
+        .hero-quote blockquote {
+            font-family: var(--font-display);
+            font-size: clamp(1.4rem, 2.5vw, 2rem);
+            font-weight: 300;
+            font-style: italic;
+            line-height: 1.4;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-quote cite {
+            display: block;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--gold-light);
+            font-style: normal;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        section {
+            padding: clamp(4rem, 8vw, 8rem) clamp(1.5rem, 5vw, 4rem);
+        }
+
+        .container {
+            max-width: 1160px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.72rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 400;
+            margin-bottom: 1.25rem;
+        }
+
+        .section-label::before {
+            content: '';
+            display: block;
+            width: 2rem;
+            height: 1px;
+            background: var(--gold);
+        }
+
+        h2 {
+            font-family: var(--font-display);
+            font-size: clamp(2.2rem, 4vw, 3.8rem);
+            font-weight: 300;
+            line-height: 1.1;
+            color: var(--navy);
+        }
+
+        h2 em {
+            font-style: italic;
+            color: var(--gold);
+        }
+
+        .lead {
+            font-size: 1.05rem;
+            color: var(--muted);
+            max-width: 55ch;
+            line-height: 1.8;
+            margin-top: 1.25rem;
+        }
+
+        .gold-rule {
+            display: block;
+            width: 3rem;
+            height: 2px;
+            background: var(--gold);
+            margin: 1.5rem 0;
+        }
+
+        /* INTRO */
+        .intro {
+            background: var(--parchment);
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: clamp(3rem, 6vw, 6rem);
+            align-items: center;
+        }
+
+        .intro-text p {
+            margin-top: 1.1rem;
+            color: var(--muted);
+            line-height: 1.9;
+        }
+
+        .intro-text p strong {
+            color: var(--ink);
+            font-weight: 500;
+        }
+
+        .intro-visual-card {
+            background: var(--navy);
+            padding: 3rem 2.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .intro-visual-card::before {
+            content: '«';
+            position: absolute;
+            top: -1.5rem;
+            left: 1.5rem;
+            font-family: var(--font-display);
+            font-size: 12rem;
+            font-weight: 600;
+            line-height: 1;
+            color: rgba(184, 147, 90, 0.12);
+        }
+
+        .intro-visual-card blockquote {
+            font-family: var(--font-display);
+            font-size: 1.6rem;
+            font-weight: 300;
+            font-style: italic;
+            color: var(--white);
+            line-height: 1.5;
+            position: relative;
+            z-index: 1;
+        }
+
+        .intro-visual-card cite {
+            display: block;
+            margin-top: 1.25rem;
+            font-size: 0.72rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-style: normal;
+        }
+
+        /* SERVICES */
+        .services-section {
+            background: var(--cream);
+        }
+
+        .services-header {
+            max-width: 600px;
+            margin-bottom: 4rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5px;
+            background: var(--border);
+        }
+
+        .service-card {
+            background: var(--cream);
+            padding: 2.5rem 2rem;
+            position: relative;
+            overflow: hidden;
+            transition: background 0.3s;
+        }
+
+        .service-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: width 0.4s var(--ease-out);
+        }
+
+        .service-card:hover {
+            background: var(--white);
+        }
+
+        .service-card:hover::after {
+            width: 100%;
+        }
+
+        .service-num {
+            font-family: var(--font-display);
+            font-size: 3.5rem;
+            font-weight: 300;
+            color: rgba(184, 147, 90, 0.2);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .service-card:hover .service-num {
+            color: var(--gold-light);
+        }
+
+        .service-title {
+            font-family: var(--font-display);
+            font-size: 1.35rem;
+            font-weight: 400;
+            color: var(--navy);
+            margin-bottom: 0.75rem;
+            line-height: 1.2;
+        }
+
+        .service-desc {
+            font-size: 0.9rem;
+            color: var(--muted);
+            line-height: 1.8;
+        }
+
+        .service-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            margin-top: 1.25rem;
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 400;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .service-link:hover {
+            border-color: var(--gold);
+        }
+
+        /* WHY MELIORA */
+        .why-section {
+            background: var(--navy);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: linear-gradient(rgba(184, 147, 90, 0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(184, 147, 90, 0.06) 1px, transparent 1px);
+            background-size: 80px 80px;
+        }
+
+        .why-section .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .why-section h2 {
+            color: var(--white);
+        }
+
+        .why-section h2 em {
+            color: var(--gold);
+        }
+
+        .why-section .section-label {
+            color: var(--gold-light);
+        }
+
+        .why-section .section-label::before {
+            background: var(--gold-light);
+        }
+
+        .why-section .lead {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem 4rem;
+            margin-top: 3.5rem;
+        }
+
+        .why-item {
+            border-top: 1px solid rgba(184, 147, 90, 0.3);
+            padding-top: 1.75rem;
+        }
+
+        .why-item-num {
+            font-family: var(--font-display);
+            font-size: 1rem;
+            color: var(--gold);
+            margin-bottom: 0.6rem;
+        }
+
+        .why-item-title {
+            font-family: var(--font-display);
+            font-size: 1.45rem;
+            font-weight: 400;
+            color: var(--white);
+            margin-bottom: 0.65rem;
+            line-height: 1.2;
+        }
+
+        .why-item-desc {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.5);
+            line-height: 1.85;
+        }
+
+        /* ── NEW SECTION 1: THE FRENCH PROBLEM ─────────────────────────────── */
+        .french-problem {
+            background: var(--cream);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .french-problem::after {
+            content: 'FR';
+            position: absolute;
+            right: -3rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-family: var(--font-display);
+            font-size: clamp(10rem, 25vw, 22rem);
+            font-weight: 600;
+            line-height: 1;
+            color: rgba(184, 147, 90, 0.06);
+            pointer-events: none;
+            letter-spacing: -0.05em;
+            z-index: 0;
+        }
+
+        .french-problem-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: clamp(3rem, 6vw, 8rem);
+            align-items: start;
+        }
+
+        .french-problem-left {
+            position: relative;
+        }
+
+        .fp-overline {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.72rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+        }
+
+        .fp-overline::before {
+            content: '';
+            display: block;
+            width: 2rem;
+            height: 1px;
+            background: var(--gold);
+        }
+
+        .french-problem-left h2 {
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            margin-bottom: 0;
+        }
+
+        .fp-statement {
+            margin-top: 2rem;
+            padding: 1.75rem 2rem;
+            border-left: 2px solid var(--gold);
+            background: var(--parchment);
+        }
+
+        .fp-statement p {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            font-weight: 300;
+            font-style: italic;
+            color: var(--navy);
+            line-height: 1.55;
+        }
+
+        .french-problem-right {
+            padding-top: 0.5rem;
+        }
+
+        .fp-scenarios {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .fp-scenario {
+            display: grid;
+            grid-template-columns: 3rem 1fr;
+            gap: 1.25rem;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid var(--border);
+            align-items: start;
+            transition: background 0.2s;
+        }
+
+        .fp-scenario:first-child {
+            border-top: 1px solid var(--border);
+        }
+
+        .fp-scenario-icon {
+            width: 3rem;
+            height: 3rem;
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            color: var(--gold);
+            background: var(--white);
+        }
+
+        .fp-scenario-title {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 400;
+            color: var(--navy);
+            margin-bottom: 0.35rem;
+            line-height: 1.2;
+        }
+
+        .fp-scenario-desc {
+            font-size: 0.87rem;
+            color: var(--muted);
+            line-height: 1.8;
+        }
+
+        /* ── NEW SECTION 2: THE FRENCH WORLD ───────────────────────────────── */
+        .french-world {
+            background: var(--navy);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .french-world::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(184, 147, 90, 0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(184, 147, 90, 0.04) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+
+        .french-world .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .fw-header {
+            text-align: center;
+            max-width: 680px;
+            margin: 0 auto 5rem;
+        }
+
+        .fw-header .section-label {
+            color: var(--gold-light);
+            justify-content: center;
+        }
+
+        .fw-header .section-label::before {
+            background: var(--gold-light);
+        }
+
+        .fw-header h2 {
+            color: var(--white);
+        }
+
+        .fw-header h2 em {
+            color: var(--gold);
+        }
+
+        .fw-header .lead {
+            color: rgba(255, 255, 255, 0.45);
+            margin: 1.25rem auto 0;
+            text-align: center;
+        }
+
+        .fw-strips {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5px;
+            background: rgba(184, 147, 90, 0.15);
+        }
+
+        .fw-strip {
+            background: var(--navy);
+            padding: 2.5rem 1.75rem 2rem;
+            position: relative;
+            overflow: hidden;
+            transition: background 0.35s;
+            cursor: default;
+        }
+
+        .fw-strip::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--gold);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s var(--ease-out);
+        }
+
+        .fw-strip:hover {
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        .fw-strip:hover::before {
+            transform: scaleX(1);
+        }
+
+        .fw-strip-locale {
+            font-size: 0.65rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 400;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .fw-strip-locale::before {
+            content: '';
+            display: block;
+            width: 1.5rem;
+            height: 1px;
+            background: var(--gold);
+        }
+
+        .fw-strip-word {
+            font-family: var(--font-display);
+            font-size: 2.2rem;
+            font-weight: 300;
+            font-style: italic;
+            color: var(--white);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .fw-strip-translation {
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.35);
+            margin-bottom: 1.25rem;
+        }
+
+        .fw-strip-note {
+            font-size: 0.87rem;
+            color: rgba(255, 255, 255, 0.45);
+            line-height: 1.75;
+            border-top: 1px solid rgba(184, 147, 90, 0.2);
+            padding-top: 1.25rem;
+            margin-top: auto;
+        }
+
+        .fw-strip-note em {
+            color: var(--gold-light);
+            font-style: normal;
+        }
+
+        .fw-bottom {
+            margin-top: 4rem;
+            padding: 2.5rem 3rem;
+            border: 1px solid rgba(184, 147, 90, 0.2);
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .fw-bottom-text {
+            font-family: var(--font-display);
+            font-size: clamp(1.4rem, 2.5vw, 2rem);
+            font-weight: 300;
+            font-style: italic;
+            color: var(--white);
+            line-height: 1.4;
+        }
+
+        .fw-bottom-text em {
+            color: var(--gold);
+            font-style: italic;
+        }
+
+        /* PROCESS */
+        .process-section {
+            background: var(--parchment);
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            margin-top: 4rem;
+            position: relative;
+            gap: 0;
+        }
+
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 2.2rem;
+            left: 16.66%;
+            right: 16.66%;
+            height: 1px;
+            background: var(--border);
+            z-index: 0;
+        }
+
+        .process-step {
+            padding: 0 2rem;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .process-step-dot {
+            width: 44px;
+            height: 44px;
+            border: 1px solid var(--gold);
+            background: var(--parchment);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            color: var(--gold);
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .process-step:hover .process-step-dot {
+            background: var(--gold);
+            color: var(--white);
+        }
+
+        .process-step-title {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: var(--navy);
+            margin-bottom: 0.75rem;
+        }
+
+        .process-step-desc {
+            font-size: 0.88rem;
+            color: var(--muted);
+            line-height: 1.8;
+        }
+
+        /* CTA */
+        .cta-section {
+            background: var(--cream);
+        }
+
+        .cta-inner {
+            border: 1px solid var(--border);
+            padding: clamp(3rem, 6vw, 5rem) clamp(2rem, 5vw, 4rem);
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: center;
+            gap: 3rem;
+            background: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-inner::before {
+            content: '»';
+            position: absolute;
+            right: -2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-family: var(--font-display);
+            font-size: 18rem;
+            line-height: 1;
+            color: rgba(28, 43, 58, 0.03);
+            pointer-events: none;
+        }
+
+        .cta-text h2 {
+            font-size: clamp(1.8rem, 3.5vw, 3rem);
+        }
+
+        .cta-text p {
+            color: var(--muted);
+            margin-top: 0.75rem;
+            line-height: 1.8;
+        }
+
+        .cta-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: flex-end;
+            flex-shrink: 0;
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--navy);
+            padding: 3rem clamp(1.5rem, 5vw, 4rem);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .footer-logo {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            color: var(--white);
+            font-weight: 400;
+        }
+
+        .footer-logo span {
+            color: var(--gold);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.4);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+
+        .footer-copy {
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.25);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .hero {
+                grid-template-columns: 1fr;
+                min-height: auto;
+            }
+
+            .hero-right {
+                min-height: 320px;
+            }
+
+            .intro-grid,
+            .why-grid,
+            .cta-inner,
+            .french-problem-inner {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+
+            .process-steps::before {
+                display: none;
+            }
+
+            .process-step {
+                padding: 1.5rem 0;
+                border-top: 1px solid var(--border);
+            }
+
+            .cta-actions {
+                align-items: center;
+                text-align: center;
+                width: 100%;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-toggle {
+                display: block;
+            }
+
+            .fw-strips {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .fw-bottom {
+                grid-template-columns: 1fr;
+            }
+
+            .fw-bottom .btn-primary {
+                align-self: flex-start;
+            }
+
+            .french-problem::after {
+                right: -1rem;
+                opacity: 0.03;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-quote {
+                padding: 0 0 0 1.5rem;
+                margin: 0 auto;
+            }
+
+            .hero-quote blockquote {
+                font-size: 1.3rem;
+                margin-bottom: 1rem;
+            }
+
+            .fw-strips {
+                grid-template-columns: 1fr;
+            }
+
+            .fw-bottom {
+                padding: 2rem 1.5rem;
+                text-align: center;
+            }
+
+            .fw-bottom .btn-primary {
+                align-self: center;
+                width: 100%;
+            }
+
+            .intro-visual-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .intro-visual-card blockquote {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <a class="nav-logo" href="https://www.melioratranslationservices.com/">Meliora <span>Translation</span></a>
+        <ul class="nav-links">
+            <li><a href="https://www.melioratranslationservices.com/">Home</a></li>
+            <li><a href="https://www.melioratranslationservices.com/services">Services</a></li>
+            <li><a href="https://www.melioratranslationservices.com/pricing">Pricing</a></li>
+            <li><a href="https://www.melioratranslationservices.com/testimonials">Testimonials</a></li>
+        </ul>
+        <div style="display:flex; align-items:center; gap: 1rem;">
+            <a class="nav-cta" href="https://www.melioratranslationservices.com/get-a-quote">Get a Quote</a>
+            <button class="mobile-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="nav-overlay">
+        <ul>
+            <li><a href="https://www.melioratranslationservices.com/">Home</a></li>
+            <li><a href="https://www.melioratranslationservices.com/services">Services</a></li>
+            <li><a href="https://www.melioratranslationservices.com/pricing">Pricing</a></li>
+            <li><a href="https://www.melioratranslationservices.com/testimonials">Testimonials</a></li>
+        </ul>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-heading">
+        <div class="hero-left">
+            <h1 id="hero-heading">French<br><em>Translation</em><br>Service</h1>
+            <p class="hero-desc">
+                Precise, culturally fluent French translation for law firms, healthcare providers,
+                businesses, and individuals who need documents that don't just read correctly—they
+                <em>land</em> correctly.
+            </p>
+            <div class="hero-actions">
+                <a class="btn-primary" href="https://www.melioratranslationservices.com/get-a-quote">Request a Quote</a>
+                <a class="btn-ghost" href="#services">Explore Services ↓</a>
+            </div>
+            <div class="hero-deco" aria-hidden="true">«</div>
+        </div>
+        <div class="hero-right" aria-hidden="true">
+            <div class="hero-quote">
+                <blockquote>"Without translation, we would be living in provinces bordering on silence."</blockquote>
+                <cite>— George Steiner</cite>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="intro">
+        <div class="container intro-grid">
+            <div class="intro-text reveal">
+                <h2>More than words—<em>meaning</em>, preserved.</h2>
+                <span class="gold-rule"></span>
+                <p>
+                    French is spoken by over <strong>300 million people</strong> across 29 countries.
+                    From Québec to Paris, from the courts of Brussels to the boardrooms of Dakar,
+                    the language you use signals who you are—and whether you can be trusted.
+                </p>
+                <p>
+                    A word-for-word translation can mislead. A legally inaccurate translation can cost you a case,
+                    a deal, or a relationship. I specialize in bringing the <em>full weight</em> of your original
+                    document into French—or back into English—with zero ambiguity left behind.
+                </p>
+                <p>
+                    Whether you need a <a href="https://www.melioratranslationservices.com/legal-translation">legal
+                        contract</a> reviewed across jurisdictions, a
+                    <a href="https://www.melioratranslationservices.com/marketing-transcreation">medical
+                        transcreation</a>
+                    translated with clinical precision, or
+                    <a href="https://www.melioratranslationservices.com/marketing-transcreation">marketing copy</a>
+                    that resonates with French-speaking audiences—this is where clarity begins.
+                </p>
+            </div>
+            <div class="intro-visual reveal" style="transition-delay:0.15s">
+                <div class="intro-visual-card">
+                    <blockquote>
+                        "One wrong word in a legal document can change everything. That's why I never
+                        stop at translation—I stop at clarity."
+                    </blockquote>
+                    <cite>— Meliora Translation Services</cite>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <div class="services-header reveal">
+                <h2>French translation<br>for every <em>context</em></h2>
+                <p class="lead">
+                    French translation isn't a single skill—it's a set of them. Each domain has its own
+                    vocabulary, conventions, and stakes. Here's where I specialize.
+                </p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-num">01</div>
+                    <h3 class="service-title">Legal Translation</h3>
+                    <p class="service-desc">
+                        Contracts, court filings, immigration documents, patent applications—every clause
+                        matters. I translate French legal documents with the terminological precision
+                        that courts and legal professionals require, ensuring nothing shifts in meaning
+                        between one language and the other.
+                    </p>
+                    <a class="service-link" href="https://www.melioratranslationservices.com/legal-translation">Explore
+                        Legal Translation →</a>
+                </div>
+                <div class="service-card reveal" style="transition-delay:0.1s">
+                    <div class="service-num">02</div>
+                    <h3 class="service-title">Medical Transcreation</h3>
+                    <p class="service-desc">
+                        Patient records, clinical documents, pharmaceutical labels, and informed consent
+                        forms demand absolute accuracy. My <a
+                            href="https://www.melioratranslationservices.com/marketing-transcreation">French medical
+                            transcreation</a>
+                        service ensures that clinical meaning is never lost, distorted, or softened.
+                    </p>
+                    <a class="service-link"
+                        href="https://www.melioratranslationservices.com/marketing-transcreation">Explore Medical
+                        Transcreation →</a>
+                </div>
+                <div class="service-card reveal" style="transition-delay:0.2s">
+                    <div class="service-num">03</div>
+                    <h3 class="service-title">Marketing Transcreation</h3>
+                    <p class="service-desc">
+                        French-speaking audiences can tell when marketing copy was machine-translated.
+                        I adapt your messaging so it sounds native—not just correct. Tone, idiom,
+                        and cultural nuance are all preserved, so your brand lands the way you intended.
+                    </p>
+                    <a class="service-link"
+                        href="https://www.melioratranslationservices.com/marketing-transcreation">Explore Marketing
+                        Transcreation →</a>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-num">04</div>
+                    <h3 class="service-title">eBook &amp; Literary Translation</h3>
+                    <p class="service-desc">
+                        Voice, rhythm, and style don't survive a clumsy translation. My
+                        <a href="https://www.melioratranslationservices.com/ebook-translation">French ebook and literary
+                            translation</a>
+                        service preserves the author's intent while making the text feel entirely at home
+                        in the target language.
+                    </p>
+                    <a class="service-link" href="https://www.melioratranslationservices.com/ebook-translation">Explore
+                        eBook Translation →</a>
+                </div>
+                <div class="service-card reveal" style="transition-delay:0.1s">
+                    <div class="service-num">05</div>
+                    <h3 class="service-title">Interpretation Services</h3>
+                    <p class="service-desc">
+                        Need a French interpreter for a deposition, business meeting, or court hearing?
+                        I provide professional <a
+                            href="https://www.melioratranslationservices.com/interpretation-service">French
+                            interpretation services</a>
+                        that keep every conversation moving smoothly—without gaps, delays, or miscommunication.
+                    </p>
+                    <a class="service-link"
+                        href="https://www.melioratranslationservices.com/interpretation-service">Explore Interpretation
+                        →</a>
+                </div>
+                <div class="service-card reveal" style="transition-delay:0.2s">
+                    <div class="service-num">06</div>
+                    <h3 class="service-title">Real Estate Translation</h3>
+                    <p class="service-desc">
+                        Property listings, lease agreements, purchase contracts, and appraisal reports
+                        require precise translation to ensure international real estate transactions
+                        proceed smoothly. I provide specialized French real estate translation for agents,
+                        investors, and relocation firms.
+                    </p>
+                    <a class="service-link"
+                        href="https://www.melioratranslationservices.com/real-estate-translation">Explore Real Estate
+                        Translation →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY MELIORA -->
+    <section class="why-section">
+        <div class="container">
+            <div class="reveal">
+                <h2>What sets this<br><em>apart</em></h2>
+                <p class="lead">There's no shortage of translation tools and services. Here's what you actually get when
+                    you work with Meliora.</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-item reveal">
+                    <div class="why-item-num">01</div>
+                    <div class="why-item-title">Legal &amp; Cultural Fluency</div>
+                    <p class="why-item-desc">I don't just speak French—I understand how legal language works across
+                        jurisdictions. What's enforceable in Québec reads differently than in France. Every translation
+                        is adapted to the legal culture it will be used in.</p>
+                </div>
+                <div class="why-item reveal" style="transition-delay:0.1s">
+                    <div class="why-item-num">02</div>
+                    <div class="why-item-title">Nothing Gets Glossed Over</div>
+                    <p class="why-item-desc">The fine print is where errors hide. I read every clause, every footnote,
+                        every qualifier—because that's where meaning lives. You'll never receive a translation that
+                        skips the hard parts.</p>
+                </div>
+                <div class="why-item reveal" style="transition-delay:0.15s">
+                    <div class="why-item-num">03</div>
+                    <div class="why-item-title">Deadlines Kept, Always</div>
+                    <p class="why-item-desc">Legal and business timelines don't move for anyone. You'll receive your
+                        translation when promised—with updates along the way, no chasing required.</p>
+                </div>
+                <div class="why-item reveal" style="transition-delay:0.2s">
+                    <div class="why-item-num">04</div>
+                    <div class="why-item-title">Complete Confidentiality</div>
+                    <p class="why-item-desc">Every document you share is treated with the same discretion a lawyer
+                        extends to client files. Your information never leaves the room.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── NEW SECTION 1: THE FRENCH PROBLEM ─────────────────────────────── -->
+    <section class="french-problem">
+        <div class="container">
+            <div class="french-problem-inner">
+                <div class="french-problem-left reveal">
+                    <div class="fp-overline">When translation falls short</div>
+                    <h2>French doesn't<br>just mean<br><em>French.</em></h2>
+                    <div class="fp-statement">
+                        <p>The same sentence, translated correctly into French, can still be read three different ways
+                            depending on where your reader sits—Paris, Montréal, or Abidjan.</p>
+                    </div>
+                </div>
+                <div class="french-problem-right reveal" style="transition-delay:0.15s">
+                    <div class="fp-scenarios">
+                        <div class="fp-scenario">
+                            <div class="fp-scenario-icon">I</div>
+                            <div>
+                                <div class="fp-scenario-title">When the register is wrong</div>
+                                <p class="fp-scenario-desc">Legal French in France leans formal and precise. In Québec,
+                                    statutory language follows its own civil law tradition. Using the wrong register in
+                                    the wrong jurisdiction doesn't just sound off—it raises questions about the
+                                    document's authority.</p>
+                            </div>
+                        </div>
+                        <div class="fp-scenario">
+                            <div class="fp-scenario-icon">II</div>
+                            <div>
+                                <div class="fp-scenario-title">When idiom doesn't travel</div>
+                                <p class="fp-scenario-desc">A phrase that's perfectly natural in English can arrive in
+                                    French sounding literal, cold, or unintentionally humorous. In a marketing campaign,
+                                    that's a missed connection. In a medical document, it's a liability.</p>
+                            </div>
+                        </div>
+                        <div class="fp-scenario">
+                            <div class="fp-scenario-icon">III</div>
+                            <div>
+                                <div class="fp-scenario-title">When terminology shifts meaning</div>
+                                <p class="fp-scenario-desc">A single term—"contrat," "accord," "convention"—carries
+                                    different legal weight depending on the French-speaking jurisdiction. I don't guess.
+                                    I research, verify, and translate with the precision your document demands.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── NEW SECTION 2: THE FRENCH WORLD ───────────────────────────────── -->
+    <section class="french-world">
+        <div class="container">
+            <div class="fw-header reveal">
+                <div class="section-label">The language behind the language</div>
+                <h2>French carries<br><em>culture</em> in every word</h2>
+                <p class="lead">Every dialect, region, and professional field brings its own French to the table.
+                    Knowing the language is the starting point—knowing its world is what makes translation work.</p>
+            </div>
+
+            <div class="fw-strips">
+                <div class="fw-strip reveal">
+                    <div class="fw-strip-locale">France · Legal</div>
+                    <div class="fw-strip-word">Jurisprudence</div>
+                    <div class="fw-strip-translation">Case Law</div>
+                    <div class="fw-strip-note">In French civil law, <em>jurisprudence</em> carries formal weight that
+                        "case law" alone doesn't capture in English. Context, jurisdiction, and the document's purpose
+                        all shape the right translation choice.</div>
+                </div>
+                <div class="fw-strip reveal" style="transition-delay:0.08s">
+                    <div class="fw-strip-locale">Québec · Real Estate</div>
+                    <div class="fw-strip-word">Promesse d'achat</div>
+                    <div class="fw-strip-translation">Offer to Purchase</div>
+                    <div class="fw-strip-note">The Québec real estate system operates under the Civil Code—meaning
+                        <em>promesse d'achat</em> is a binding legal instrument with obligations not captured by simply
+                        writing "offer."
+                    </div>
+                </div>
+                <div class="fw-strip reveal" style="transition-delay:0.16s">
+                    <div class="fw-strip-locale">Clinical · Medical</div>
+                    <div class="fw-strip-word">Consentement éclairé</div>
+                    <div class="fw-strip-translation">Informed Consent</div>
+                    <div class="fw-strip-note">Medical transcreation demands that patients understand—truly
+                        understand—what they're agreeing to. <em>Éclairé</em> means illuminated, not just informed. The
+                        difference matters in a clinical setting.</div>
+                </div>
+                <div class="fw-strip reveal" style="transition-delay:0.24s">
+                    <div class="fw-strip-locale">Marketing · Brand</div>
+                    <div class="fw-strip-word">Savoir-faire</div>
+                    <div class="fw-strip-translation">Expertise</div>
+                    <div class="fw-strip-note">Translating "savoir-faire" as "expertise" is technically correct and
+                        emotionally flat. Great marketing transcreation keeps the feeling intact—even when the exact
+                        words can't cross the border.</div>
+                </div>
+            </div>
+
+            <div class="fw-bottom reveal" style="transition-delay:0.1s">
+                <div class="fw-bottom-text">
+                    "This is why I don't just translate French—I translate the <em>world it came from</em>."<br>
+                    <span
+                        style="font-size:0.75rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold); font-family:var(--font-body); font-style:normal; font-weight:400; display:block; margin-top:1rem;">—
+                        Nene Gaines, Meliora Translation Services</span>
+                </div>
+                <a class="btn-primary" href="https://www.melioratranslationservices.com/get-a-quote">Start Your
+                    Translation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="process-section">
+        <div class="container">
+            <div class="reveal" style="text-align:center; max-width: 600px; margin: 0 auto 0;">
+                <h2>Simple, <em>straightforward</em>,<br>stress-free</h2>
+            </div>
+            <div class="process-steps">
+                <div class="process-step reveal">
+                    <div class="process-step-dot">I</div>
+                    <h3 class="process-step-title">Share Your Documents</h3>
+                    <p class="process-step-desc">Tell me what you need translated—one contract or a full case file. I'll
+                        gather the details and confirm the scope, timeline, and any jurisdiction-specific requirements.
+                    </p>
+                </div>
+                <div class="process-step reveal" style="transition-delay:0.1s">
+                    <div class="process-step-dot">II</div>
+                    <h3 class="process-step-title">I Get to Work</h3>
+                    <p class="process-step-desc">You'll receive progress updates throughout. If I have a question—about
+                        context, intent, or a specialized term—I'll ask, so the final result is exactly what you need.
+                    </p>
+                </div>
+                <div class="process-step reveal" style="transition-delay:0.2s">
+                    <div class="process-step-dot">III</div>
+                    <h3 class="process-step-title">Review &amp; Finalize</h3>
+                    <p class="process-step-desc">You receive a clean, ready-to-use translation. If anything needs a
+                        second look, I revise it. No post-delivery headaches, no back-and-forth frustration.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-inner reveal">
+                <div class="cta-text">
+                    <h2>Let's make your French<br><em>translation</em> effortless.</h2>
+                    <p>Send over your documents and I'll get back to you with a quote, a timeline, and everything you
+                        need to move forward with confidence.</p>
+                </div>
+                <div class="cta-actions">
+                    <a class="btn-primary" href="https://www.melioratranslationservices.com/get-a-quote">Get a Free
+                        Quote</a>
+                    <a class="btn-ghost" href="mailto:info@melioratranslationservices.com"
+                        style="color:var(--navy)">info@melioratranslationservices.com</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-logo">Meliora <span>Translation</span></div>
+        <ul class="footer-links">
+            <li><a href="https://www.melioratranslationservices.com/legal-translation">Legal</a></li>
+            <li><a href="https://www.melioratranslationservices.com/marketing-transcreation">Medical Transcreation</a>
+            </li>
+            <li><a href="https://www.melioratranslationservices.com/ebook-translation">eBook</a></li>
+            <li><a href="https://www.melioratranslationservices.com/marketing-transcreation">Marketing Transcreation</a>
+            </li>
+            <li><a href="https://www.melioratranslationservices.com/interpretation-service">Interpretation</a></li>
+            <li><a href="https://www.melioratranslationservices.com/real-estate-translation">Real Estate</a></li>
+        </ul>
+        <span class="footer-copy">© 2025 Meliora Translation Services</span>
+    </footer>
+
+    <script>
+        const reveals = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        reveals.forEach(el => observer.observe(el));
+
+        // Mobile Menu Logic
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const navOverlay = document.querySelector('.nav-overlay');
+        const body = document.body;
+
+        mobileToggle.addEventListener('click', () => {
+            navOverlay.classList.toggle('active');
+            body.style.overflow = navOverlay.classList.contains('active') ? 'hidden' : '';
+            
+            // Hamburger Animation
+            const spans = mobileToggle.querySelectorAll('span');
+            if (navOverlay.classList.contains('active')) {
+                spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'rotate(-45deg) translate(7px, -7px)';
+            } else {
+                spans[0].style.transform = '';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = '';
+            }
+        });
+    </script>
+</body>
+
+</html>
