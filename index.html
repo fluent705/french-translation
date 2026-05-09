@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>French Translation Service | Meliora Translation Services</title>
+    <title>French Translation & Interpretation Service | Meliora Translation Services</title>
     <meta name="description"
-        content="Professional French translation services for legal, medical transcreation, marketing transcreation, and literary documents. Accurate, culturally fluent, and delivered on time by Meliora Translation Services." />
+        content="Professional French translation and interpretation services for immigration interviews, legal proceedings, medical appointments, and business meetings. ATA Member. Accurate, culturally fluent, and trusted by immigration lawyers." />
     <meta name="keywords"
-        content="French translation service, English to French translation, French to English translation, legal French translation, medical French transcreation, marketing French transcreation, real estate French translation" />
+        content="French interpretation service, French interpreter immigration, French interpreter legal, French medical interpreter, English to French translation, French to English translation, ATA member French translator, immigration interview interpreter, Meliora Translation Services" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -212,10 +212,21 @@
             animation: fadeUp 0.5s forwards;
         }
 
-        .nav-overlay.active li:nth-child(1) { animation-delay: 0.1s; }
-        .nav-overlay.active li:nth-child(2) { animation-delay: 0.2s; }
-        .nav-overlay.active li:nth-child(3) { animation-delay: 0.3s; }
-        .nav-overlay.active li:nth-child(4) { animation-delay: 0.4s; }
+        .nav-overlay.active li:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .nav-overlay.active li:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .nav-overlay.active li:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .nav-overlay.active li:nth-child(4) {
+            animation-delay: 0.4s;
+        }
 
         .nav-overlay a {
             font-family: var(--font-display);
@@ -407,10 +418,39 @@
             font-style: normal;
         }
 
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-            }
+        /* ATA BADGE — floats in hero-left */
+        .ata-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1.75rem;
+            padding: 0.6rem 1rem 0.6rem 0.75rem;
+            border: 1px solid var(--border);
+            background: var(--white);
+            width: fit-content;
+            opacity: 0;
+            animation: fadeUp 0.8s 0.18s var(--ease-out) forwards;
+        }
+
+        .ata-badge-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--gold);
+            flex-shrink: 0;
+        }
+
+        .ata-badge-text {
+            font-size: 0.7rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--navy-mid);
+            font-weight: 400;
+        }
+
+        .ata-badge-text strong {
+            color: var(--gold);
+            font-weight: 500;
         }
 
         @keyframes fadeUp {
@@ -638,6 +678,401 @@
             border-color: var(--gold);
         }
 
+        /* ── INTERPRETATION — FEATURED SECTION ─────────────────────────── */
+        .interpretation-section {
+            background: var(--navy);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .interpretation-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: linear-gradient(rgba(184, 147, 90, 0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(184, 147, 90, 0.06) 1px, transparent 1px);
+            background-size: 80px 80px;
+        }
+
+        .interpretation-section .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .interp-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: clamp(3rem, 6vw, 7rem);
+            align-items: start;
+        }
+
+        .interp-left .section-label {
+            color: var(--gold-light);
+        }
+
+        .interp-left .section-label::before {
+            background: var(--gold-light);
+        }
+
+        .interp-left h2 {
+            color: var(--white);
+        }
+
+        .interp-left h2 em {
+            color: var(--gold);
+        }
+
+        .interp-left .lead {
+            color: rgba(255, 255, 255, 0.5);
+            max-width: 44ch;
+        }
+
+        .interp-highlight {
+            margin-top: 2.5rem;
+            padding: 1.75rem 2rem;
+            border-left: 2px solid var(--gold);
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        .interp-highlight p {
+            font-family: var(--font-display);
+            font-size: 1.15rem;
+            font-weight: 300;
+            font-style: italic;
+            color: var(--white);
+            line-height: 1.6;
+        }
+
+        .interp-highlight cite {
+            display: block;
+            margin-top: 0.85rem;
+            font-size: 0.7rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-style: normal;
+        }
+
+        .interp-right {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .interp-card {
+            padding: 1.75rem 0;
+            border-bottom: 1px solid rgba(184, 147, 90, 0.2);
+            display: grid;
+            grid-template-columns: 3rem 1fr;
+            gap: 1.25rem;
+            align-items: start;
+            transition: background 0.2s;
+        }
+
+        .interp-card:first-child {
+            border-top: 1px solid rgba(184, 147, 90, 0.2);
+        }
+
+        .interp-card-icon {
+            width: 3rem;
+            height: 3rem;
+            border: 1px solid rgba(184, 147, 90, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-family: var(--font-display);
+            font-size: 1rem;
+            color: var(--gold);
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        .interp-card-title {
+            font-family: var(--font-display);
+            font-size: 1.15rem;
+            font-weight: 400;
+            color: var(--white);
+            margin-bottom: 0.4rem;
+            line-height: 1.2;
+        }
+
+        .interp-card-title .badge {
+            display: inline-block;
+            font-family: var(--font-body);
+            font-size: 0.62rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            background: var(--gold);
+            color: var(--white);
+            padding: 0.15rem 0.5rem;
+            margin-left: 0.5rem;
+            vertical-align: middle;
+            font-weight: 400;
+        }
+
+        .interp-card-desc {
+            font-size: 0.87rem;
+            color: rgba(255, 255, 255, 0.45);
+            line-height: 1.8;
+        }
+
+        /* ── CREDIBILITY SECTION ─────────────────────────────────────────── */
+        .credibility-section {
+            background: var(--parchment);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .credibility-section::after {
+            content: '★';
+            position: absolute;
+            right: -2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: clamp(10rem, 22vw, 20rem);
+            line-height: 1;
+            color: rgba(184, 147, 90, 0.06);
+            pointer-events: none;
+        }
+
+        .cred-header {
+            max-width: 600px;
+            margin-bottom: 4rem;
+        }
+
+        .cred-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5px;
+            background: var(--border);
+            position: relative;
+            z-index: 1;
+        }
+
+        .cred-card {
+            background: var(--cream);
+            padding: 2.25rem 2rem;
+            position: relative;
+            overflow: hidden;
+            transition: background 0.3s;
+        }
+
+        .cred-card:hover {
+            background: var(--white);
+        }
+
+        .cred-card-icon {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: var(--gold);
+            line-height: 1;
+            margin-bottom: 0.75rem;
+        }
+
+        .cred-card-title {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+        }
+
+        .cred-card-desc {
+            font-size: 0.88rem;
+            color: var(--muted);
+            line-height: 1.8;
+        }
+
+        .cred-bottom {
+            margin-top: 4rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1.5px;
+            background: var(--border);
+            position: relative;
+            z-index: 1;
+        }
+
+        .cred-stat {
+            background: var(--navy);
+            padding: 2.25rem 2rem;
+            text-align: center;
+        }
+
+        .cred-stat-num {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 300;
+            color: var(--gold);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .cred-stat-label {
+            font-size: 0.75rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.45);
+            line-height: 1.5;
+        }
+
+        /* ATA MEMBERSHIP STRIP */
+        .ata-strip {
+            background: var(--white);
+            border: 1px solid var(--border);
+            padding: 2rem 2.5rem;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-top: 2.5rem;
+            position: relative;
+            z-index: 1;
+            flex-wrap: wrap;
+        }
+
+        .ata-strip-logo {
+            font-family: var(--font-display);
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: var(--navy);
+            letter-spacing: 0.06em;
+            flex-shrink: 0;
+            border-right: 1px solid var(--border);
+            padding-right: 2rem;
+        }
+
+        .ata-strip-logo span {
+            color: var(--gold);
+        }
+
+        .ata-strip-text {
+            font-size: 0.9rem;
+            color: var(--muted);
+            line-height: 1.7;
+            flex: 1;
+        }
+
+        .ata-strip-text strong {
+            color: var(--ink);
+            font-weight: 500;
+        }
+
+        /* REVIEWS STRIP */
+        .reviews-strip {
+            background: var(--cream);
+            padding: clamp(3rem, 5vw, 5rem) clamp(1.5rem, 5vw, 4rem);
+        }
+
+        .reviews-inner {
+            max-width: 1160px;
+            margin: 0 auto;
+        }
+
+        .reviews-label {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .reviews-label .section-label {
+            margin-bottom: 0;
+        }
+
+        .stars {
+            display: inline-flex;
+            gap: 0.2rem;
+        }
+
+        .stars span {
+            color: var(--gold);
+            font-size: 1rem;
+        }
+
+        .reviews-scroll {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5px;
+            background: var(--border);
+        }
+
+        .review-card {
+            background: var(--white);
+            padding: 2rem 1.75rem;
+            position: relative;
+        }
+
+        .review-card::before {
+            content: '"';
+            font-family: var(--font-display);
+            font-size: 5rem;
+            line-height: 1;
+            color: rgba(184, 147, 90, 0.12);
+            position: absolute;
+            top: 0.5rem;
+            left: 1.5rem;
+        }
+
+        .review-text {
+            font-family: var(--font-display);
+            font-size: 1.05rem;
+            font-style: italic;
+            font-weight: 300;
+            color: var(--ink);
+            line-height: 1.65;
+            margin-bottom: 1.25rem;
+            padding-top: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .review-meta {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .review-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: var(--navy);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-display);
+            font-size: 1rem;
+            color: var(--gold);
+            flex-shrink: 0;
+        }
+
+        .review-name {
+            font-size: 0.78rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--navy);
+            font-weight: 400;
+            line-height: 1.3;
+        }
+
+        .review-context {
+            font-size: 0.72rem;
+            color: var(--muted);
+            margin-top: 0.1rem;
+        }
+
+        .review-stars {
+            margin-left: auto;
+            display: flex;
+            gap: 0.15rem;
+        }
+
+        .review-stars span {
+            color: var(--gold);
+            font-size: 0.75rem;
+        }
+
         /* WHY MELIORA */
         .why-section {
             background: var(--navy);
@@ -712,7 +1147,7 @@
             line-height: 1.85;
         }
 
-        /* ── NEW SECTION 1: THE FRENCH PROBLEM ─────────────────────────────── */
+        /* FRENCH PROBLEM */
         .french-problem {
             background: var(--cream);
             position: relative;
@@ -804,7 +1239,6 @@
             padding: 1.5rem 0;
             border-bottom: 1px solid var(--border);
             align-items: start;
-            transition: background 0.2s;
         }
 
         .fp-scenario:first-child {
@@ -840,7 +1274,7 @@
             line-height: 1.8;
         }
 
-        /* ── NEW SECTION 2: THE FRENCH WORLD ───────────────────────────────── */
+        /* FRENCH WORLD */
         .french-world {
             background: var(--navy);
             position: relative;
@@ -851,9 +1285,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            background-image:
-                linear-gradient(rgba(184, 147, 90, 0.04) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(184, 147, 90, 0.04) 1px, transparent 1px);
+            background-image: linear-gradient(rgba(184, 147, 90, 0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(184, 147, 90, 0.04) 1px, transparent 1px);
             background-size: 60px 60px;
         }
 
@@ -1172,7 +1604,8 @@
                 min-height: auto;
             }
 
-            .hero-left, .hero-quote {
+            .hero-left,
+            .hero-quote {
                 transform: none;
             }
 
@@ -1183,7 +1616,8 @@
             .intro-grid,
             .why-grid,
             .cta-inner,
-            .french-problem-inner {
+            .french-problem-inner,
+            .interp-layout {
                 grid-template-columns: 1fr;
             }
 
@@ -1234,10 +1668,35 @@
                 right: -1rem;
                 opacity: 0.03;
             }
+
+            .cred-grid,
+            .cred-bottom {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .reviews-scroll {
+                grid-template-columns: 1fr;
+            }
+
+            .ata-strip {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .ata-strip-logo {
+                border-right: none;
+                border-bottom: 1px solid var(--border);
+                padding-right: 0;
+                padding-bottom: 1.25rem;
+                width: 100%;
+            }
         }
 
         @media (max-width: 600px) {
-            .services-grid {
+
+            .services-grid,
+            .cred-grid,
+            .cred-bottom {
                 grid-template-columns: 1fr;
             }
 
@@ -1290,9 +1749,7 @@
         <div style="display:flex; align-items:center; gap: 1rem;">
             <a class="nav-cta" href="https://www.melioratranslationservices.com/get-a-quote">Get a Quote</a>
             <button class="mobile-toggle" aria-label="Toggle Menu">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </button>
         </div>
     </nav>
@@ -1309,15 +1766,14 @@
     <!-- HERO -->
     <section class="hero" aria-labelledby="hero-heading">
         <div class="hero-left">
-            <h1 id="hero-heading">French<br><em>Translation</em><br>Service</h1>
+            <h1 id="hero-heading">French Translation Service</h1>
             <p class="hero-desc">
-                Precise, culturally fluent French translation for law firms, healthcare providers,
-                businesses, and individuals who need documents that don't just read correctly—they
-                <em>land</em> correctly.
+                Precise, culturally fluent French for law firms, healthcare providers, immigration attorneys,
+                and businesses. Documents that don't just read correctly—and spoken interpretation that
+                keeps every conversation moving without a single word lost.
             </p>
             <div class="hero-actions">
                 <a class="btn-primary" href="https://www.melioratranslationservices.com/get-a-quote">Request a Quote</a>
-                <a class="btn-ghost" href="#services">Explore Services ↓</a>
             </div>
             <div class="hero-deco" aria-hidden="true">«</div>
         </div>
@@ -1341,25 +1797,21 @@
                     the language you use signals who you are—and whether you can be trusted.
                 </p>
                 <p>
-                    A word-for-word translation can mislead. A legally inaccurate translation can cost you a case,
+                    A word-for-word French translation can mislead. A legally inaccurate translation can cost you a
+                    case,
                     a deal, or a relationship. I specialize in bringing the <em>full weight</em> of your original
                     document into French—or back into English—with zero ambiguity left behind.
                 </p>
                 <p>
-                    Whether you need a <a href="https://www.melioratranslationservices.com/legal-translation">legal
-                        contract</a> reviewed across jurisdictions, a
-                    <a href="https://www.melioratranslationservices.com/marketing-transcreation">medical
-                        transcreation</a>
-                    translated with clinical precision, or
-                    <a href="https://www.melioratranslationservices.com/marketing-transcreation">marketing copy</a>
-                    that resonates with French-speaking audiences—this is where clarity begins.
+                    From legal contracts and medical records to live interpretation for depositions, immigration
+                    interviews, and real estate closings — when the words have to be right, we make sure they are.
                 </p>
             </div>
             <div class="intro-visual reveal" style="transition-delay:0.15s">
                 <div class="intro-visual-card">
                     <blockquote>
-                        "One wrong word in a legal document can change everything. That's why I never
-                        stop at translation—I stop at clarity."
+                        "One wrong word in a legal document—or one misunderstood phrase in an immigration
+                        interview—can change everything. That's why I never stop at translation. I stop at clarity."
                     </blockquote>
                     <cite>— Meliora Translation Services</cite>
                 </div>
@@ -1373,7 +1825,7 @@
             <div class="services-header reveal">
                 <h2>French translation<br>for every <em>context</em></h2>
                 <p class="lead">
-                    French translation isn't a single skill—it's a set of them. Each domain has its own
+                    Each domain has its own
                     vocabulary, conventions, and stakes. Here's where I specialize.
                 </p>
             </div>
@@ -1433,11 +1885,9 @@
                     <div class="service-num">05</div>
                     <h3 class="service-title">Interpretation Services</h3>
                     <p class="service-desc">
-                        Need a French interpreter for a deposition, business meeting, or court hearing?
-                        I provide professional <a
-                            href="https://www.melioratranslationservices.com/interpretation-service">French
-                            interpretation services</a>
-                        that keep every conversation moving smoothly—without gaps, delays, or miscommunication.
+                        Live French interpretation for immigration interviews, depositions, business meetings,
+                        medical appointments, and real estate closings. Trusted by immigration attorneys
+                        across the region.
                     </p>
                     <a class="service-link"
                         href="https://www.melioratranslationservices.com/interpretation-service">Explore Interpretation
@@ -1460,6 +1910,104 @@
         </div>
     </section>
 
+    <!-- ── INTERPRETATION — FEATURED SECTION ───────────────────────────── -->
+    <section class="interpretation-section" id="interpretation">
+        <div class="container">
+            <div class="interp-layout">
+                <div class="interp-left reveal">
+                    <h2>Not everything important<br>is written <em>down.</em></h2>
+                    <p class="lead">
+                        Some of the highest-stakes conversations happen out loud — a deposition, an immigration
+                        interview, an appointment where the wrong word changes everything. Interpretation puts a skilled
+                        voice in that room, so yours is understood exactly as you meant it.
+                    </p>
+                    <div class="interp-highlight">
+                        <p>"Immigration attorneys refer their clients to me because they know
+                            their clients will walk out of every interview understood—fully, precisely,
+                            without hesitation."</p>
+                        <cite>— Nene Gaines, Meliora Translation Services</cite>
+                    </div>
+                </div>
+                <div class="interp-right reveal" style="transition-delay:0.15s">
+                    <div class="interp-card">
+                        <div class="interp-card-icon">I</div>
+                        <div>
+                            <div class="interp-card-title">
+                                Immigration Interviews
+                            </div>
+                            <p class="interp-card-desc">
+                                USCIS interviews, asylum hearings, consular appointments—the stakes
+                                couldn't be higher. I interpret with precision and composure, ensuring
+                                officers hear exactly what your client means and your client understands
+                                every question asked. Immigration attorneys across the region trust
+                                me as their first call for French-speaking clients.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="interp-card">
+                        <div class="interp-card-icon">II</div>
+                        <div>
+                            <div class="interp-card-title">Legal Proceedings &amp; Depositions</div>
+                            <p class="interp-card-desc">
+                                Court hearings, depositions, attorney-client consultations, and
+                                arbitration sessions require an interpreter who understands legal
+                                language—not just French. I keep proceedings moving without gaps,
+                                delays, or misinterpretations that could compromise a case.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="interp-card">
+                        <div class="interp-card-icon">III</div>
+                        <div>
+                            <div class="interp-card-title">Medical Appointments</div>
+                            <p class="interp-card-desc">
+                                From initial consultations to discharge instructions, medical interpretation
+                                demands clinical vocabulary and cultural sensitivity. Patients deserve
+                                to understand their diagnosis, their options, and their consent—in a
+                                language that leaves nothing ambiguous.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="interp-card">
+                        <div class="interp-card-icon">IV</div>
+                        <div>
+                            <div class="interp-card-title">Business Meetings &amp; Real Estate Closings</div>
+                            <p class="interp-card-desc">
+                                Negotiations, board presentations, and property closings move fast.
+                                I interpret in real time so both sides stay in sync—without
+                                slowing the room down or letting nuance slip through the cracks.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── CREDIBILITY SECTION ──────────────────────────────────────────── -->
+    <section class="credibility-section">
+        <div class="container">
+            <div class="cred-header reveal">
+                <h2>Trusted by attorneys,<br>physicians, and <em>families.</em></h2>
+            </div>
+
+            <div class="cred-bottom">
+                <div class="cred-stat reveal">
+                    <div class="cred-stat-num">5★</div>
+                    <div class="cred-stat-label">Average Rating<br>Across Platforms</div>
+                </div>
+                <div class="cred-stat reveal" style="transition-delay:0.08s">
+                    <div class="cred-stat-num">ATA</div>
+                    <div class="cred-stat-label">American Translators<br>Association Member</div>
+                </div>
+                <div class="cred-stat reveal" style="transition-delay:0.16s">
+                    <div class="cred-stat-num">29+</div>
+                    <div class="cred-stat-label">French-Speaking<br>Countries Served</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- WHY MELIORA -->
     <section class="why-section">
         <div class="container">
@@ -1474,41 +2022,42 @@
                     <div class="why-item-title">Legal &amp; Cultural Fluency</div>
                     <p class="why-item-desc">I don't just speak French—I understand how legal language works across
                         jurisdictions. What's enforceable in Québec reads differently than in France. Every translation
-                        is adapted to the legal culture it will be used in.</p>
+                        and interpretation is adapted to the legal culture and setting it will be used in.</p>
                 </div>
                 <div class="why-item reveal" style="transition-delay:0.1s">
                     <div class="why-item-num">02</div>
                     <div class="why-item-title">Nothing Gets Glossed Over</div>
-                    <p class="why-item-desc">The fine print is where errors hide. I read every clause, every footnote,
-                        every qualifier—because that's where meaning lives. You'll never receive a translation that
-                        skips the hard parts.</p>
+                    <p class="why-item-desc">The fine print is where errors hide—and in interpretation, a hesitation or
+                        mistranslation can derail an entire proceeding. I stay precise under pressure, whether reading a
+                        clause or relaying a question in real time.</p>
                 </div>
                 <div class="why-item reveal" style="transition-delay:0.15s">
                     <div class="why-item-num">03</div>
                     <div class="why-item-title">Deadlines Kept, Always</div>
-                    <p class="why-item-desc">Legal and business timelines don't move for anyone. You'll receive your
-                        translation when promised—with updates along the way, no chasing required.</p>
+                    <p class="why-item-desc">Legal and immigration timelines don't move for anyone. You'll receive your
+                        translation when promised and your interpreter will be there when scheduled—with updates along
+                        the way, no chasing required.</p>
                 </div>
                 <div class="why-item reveal" style="transition-delay:0.2s">
                     <div class="why-item-num">04</div>
                     <div class="why-item-title">Complete Confidentiality</div>
-                    <p class="why-item-desc">Every document you share is treated with the same discretion a lawyer
-                        extends to client files. Your information never leaves the room.</p>
+                    <p class="why-item-desc">Every document and every conversation is treated with the same discretion a
+                        lawyer extends to client files. Immigration cases, medical records, business negotiations—your
+                        information never leaves the room.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ── NEW SECTION 1: THE FRENCH PROBLEM ─────────────────────────────── -->
+    <!-- FRENCH PROBLEM -->
     <section class="french-problem">
         <div class="container">
             <div class="french-problem-inner">
                 <div class="french-problem-left reveal">
-                    <div class="fp-overline">When translation falls short</div>
                     <h2>French doesn't<br>just mean<br><em>French.</em></h2>
                     <div class="fp-statement">
                         <p>The same sentence, translated correctly into French, can still be read three different ways
-                            depending on where your reader sits—Paris, Montréal, or Abidjan.</p>
+                            depending on where your reader—or listener—sits: Paris, Montréal, or Abidjan.</p>
                     </div>
                 </div>
                 <div class="french-problem-right reveal" style="transition-delay:0.15s">
@@ -1529,7 +2078,8 @@
                                 <div class="fp-scenario-title">When idiom doesn't travel</div>
                                 <p class="fp-scenario-desc">A phrase that's perfectly natural in English can arrive in
                                     French sounding literal, cold, or unintentionally humorous. In a marketing campaign,
-                                    that's a missed connection. In a medical document, it's a liability.</p>
+                                    that's a missed connection. In a medical document or immigration interview, it's a
+                                    liability.</p>
                             </div>
                         </div>
                         <div class="fp-scenario">
@@ -1547,16 +2097,16 @@
         </div>
     </section>
 
-    <!-- ── NEW SECTION 2: THE FRENCH WORLD ───────────────────────────────── -->
+    <!-- FRENCH WORLD -->
     <section class="french-world">
         <div class="container">
             <div class="fw-header reveal">
                 <div class="section-label">The language behind the language</div>
                 <h2>French carries<br><em>culture</em> in every word</h2>
                 <p class="lead">Every dialect, region, and professional field brings its own French to the table.
-                    Knowing the language is the starting point—knowing its world is what makes translation work.</p>
+                    Knowing the language is the starting point—knowing its world is what makes translation and
+                    interpretation work.</p>
             </div>
-
             <div class="fw-strips">
                 <div class="fw-strip reveal">
                     <div class="fw-strip-locale">France · Legal</div>
@@ -1579,20 +2129,19 @@
                     <div class="fw-strip-locale">Clinical · Medical</div>
                     <div class="fw-strip-word">Consentement éclairé</div>
                     <div class="fw-strip-translation">Informed Consent</div>
-                    <div class="fw-strip-note">Medical transcreation demands that patients understand—truly
+                    <div class="fw-strip-note">Medical interpretation demands that patients understand—truly
                         understand—what they're agreeing to. <em>Éclairé</em> means illuminated, not just informed. The
                         difference matters in a clinical setting.</div>
                 </div>
                 <div class="fw-strip reveal" style="transition-delay:0.24s">
-                    <div class="fw-strip-locale">Marketing · Brand</div>
-                    <div class="fw-strip-word">Savoir-faire</div>
-                    <div class="fw-strip-translation">Expertise</div>
-                    <div class="fw-strip-note">Translating "savoir-faire" as "expertise" is technically correct and
-                        emotionally flat. Great marketing transcreation keeps the feeling intact—even when the exact
-                        words can't cross the border.</div>
+                    <div class="fw-strip-locale">Immigration · Legal</div>
+                    <div class="fw-strip-word">Statut de réfugié</div>
+                    <div class="fw-strip-translation">Refugee Status</div>
+                    <div class="fw-strip-note">In an immigration hearing, <em>statut de réfugié</em> isn't just a
+                        phrase—it's a person's future. The interpreter in that room carries the weight of that
+                        precisely.</div>
                 </div>
             </div>
-
             <div class="fw-bottom reveal" style="transition-delay:0.1s">
                 <div class="fw-bottom-text">
                     "This is why I don't just translate French—I translate the <em>world it came from</em>."<br>
@@ -1615,23 +2164,24 @@
             <div class="process-steps">
                 <div class="process-step reveal">
                     <div class="process-step-dot">I</div>
-                    <h3 class="process-step-title">Share Your Documents</h3>
-                    <p class="process-step-desc">Tell me what you need translated—one contract or a full case file. I'll
-                        gather the details and confirm the scope, timeline, and any jurisdiction-specific requirements.
-                    </p>
+                    <h3 class="process-step-title">Share Your Needs</h3>
+                    <p class="process-step-desc">Tell me what you need—one contract, a full case file, or an upcoming
+                        interview. I'll confirm the scope, timeline, format (written or live), and any
+                        jurisdiction-specific requirements.</p>
                 </div>
                 <div class="process-step reveal" style="transition-delay:0.1s">
                     <div class="process-step-dot">II</div>
                     <h3 class="process-step-title">I Get to Work</h3>
-                    <p class="process-step-desc">You'll receive progress updates throughout. If I have a question—about
-                        context, intent, or a specialized term—I'll ask, so the final result is exactly what you need.
-                    </p>
+                    <p class="process-step-desc">For translations, you'll receive progress updates throughout. For
+                        interpretation, I'll prepare with any relevant materials you can share so the day itself runs
+                        without friction.</p>
                 </div>
                 <div class="process-step reveal" style="transition-delay:0.2s">
                     <div class="process-step-dot">III</div>
                     <h3 class="process-step-title">Review &amp; Finalize</h3>
-                    <p class="process-step-desc">You receive a clean, ready-to-use translation. If anything needs a
-                        second look, I revise it. No post-delivery headaches, no back-and-forth frustration.</p>
+                    <p class="process-step-desc">You receive a clean, ready-to-use translation—or a debrief after
+                        interpretation. If anything needs a second look, I revise it. No post-delivery headaches, no
+                        back-and-forth frustration.</p>
                 </div>
             </div>
         </div>
@@ -1642,9 +2192,10 @@
         <div class="container">
             <div class="cta-inner reveal">
                 <div class="cta-text">
-                    <h2>Let's make your French<br><em>translation</em> effortless.</h2>
-                    <p>Send over your documents and I'll get back to you with a quote, a timeline, and everything you
-                        need to move forward with confidence.</p>
+                    <h2>Your next French translation<br>deserves to be done <em>properly.</em></h2>
+                    <p>Whether it's a document that needs translating or an interview that needs an interpreter—send the
+                        details and I'll get back to you with a quote, a timeline, and everything you need to move
+                        forward with confidence.</p>
                 </div>
                 <div class="cta-actions">
                     <a class="btn-primary" href="https://www.melioratranslationservices.com/get-a-quote">Get a Free
@@ -1669,7 +2220,7 @@
             <li><a href="https://www.melioratranslationservices.com/interpretation-service">Interpretation</a></li>
             <li><a href="https://www.melioratranslationservices.com/real-estate-translation">Real Estate</a></li>
         </ul>
-        <span class="footer-copy">© 2025 Meliora Translation Services</span>
+        <span class="footer-copy">© 2025 Meliora Translation Services · ATA Member</span>
     </footer>
 
     <script>
@@ -1684,7 +2235,6 @@
         }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
         reveals.forEach(el => observer.observe(el));
 
-        // Mobile Menu Logic
         const mobileToggle = document.querySelector('.mobile-toggle');
         const navOverlay = document.querySelector('.nav-overlay');
         const body = document.body;
@@ -1692,8 +2242,6 @@
         mobileToggle.addEventListener('click', () => {
             navOverlay.classList.toggle('active');
             body.style.overflow = navOverlay.classList.contains('active') ? 'hidden' : '';
-            
-            // Hamburger Animation
             const spans = mobileToggle.querySelectorAll('span');
             if (navOverlay.classList.contains('active')) {
                 spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
@@ -1708,4 +2256,4 @@
     </script>
 </body>
 
-</html>
+</html>C:\Users\user\french-translation\v2.html
