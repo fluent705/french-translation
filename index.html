@@ -418,7 +418,7 @@
             font-style: normal;
         }
 
-        /* ATA BADGE — floats in hero-left */
+        /* ATA BADGE */
         .ata-badge {
             display: inline-flex;
             align-items: center;
@@ -678,7 +678,7 @@
             border-color: var(--gold);
         }
 
-        /* ── INTERPRETATION — FEATURED SECTION ─────────────────────────── */
+        /* INTERPRETATION — FEATURED SECTION */
         .interpretation-section {
             background: var(--navy);
             position: relative;
@@ -815,7 +815,7 @@
             line-height: 1.8;
         }
 
-        /* ── CREDIBILITY SECTION ─────────────────────────────────────────── */
+        /* CREDIBILITY SECTION */
         .credibility-section {
             background: var(--parchment);
             position: relative;
@@ -1145,133 +1145,6 @@
             font-size: 0.9rem;
             color: rgba(255, 255, 255, 0.5);
             line-height: 1.85;
-        }
-
-        /* FRENCH PROBLEM */
-        .french-problem {
-            background: var(--cream);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .french-problem::after {
-            content: 'FR';
-            position: absolute;
-            right: -3rem;
-            top: 50%;
-            transform: translateY(-50%);
-            font-family: var(--font-display);
-            font-size: clamp(10rem, 25vw, 22rem);
-            font-weight: 600;
-            line-height: 1;
-            color: rgba(184, 147, 90, 0.06);
-            pointer-events: none;
-            letter-spacing: -0.05em;
-            z-index: 0;
-        }
-
-        .french-problem-inner {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: clamp(3rem, 6vw, 8rem);
-            align-items: start;
-        }
-
-        .french-problem-left {
-            position: relative;
-        }
-
-        .fp-overline {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.75rem;
-            font-size: 0.72rem;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            color: var(--gold);
-            font-weight: 400;
-            margin-bottom: 1.5rem;
-        }
-
-        .fp-overline::before {
-            content: '';
-            display: block;
-            width: 2rem;
-            height: 1px;
-            background: var(--gold);
-        }
-
-        .french-problem-left h2 {
-            font-size: clamp(2rem, 4vw, 3.5rem);
-            margin-bottom: 0;
-        }
-
-        .fp-statement {
-            margin-top: 2rem;
-            padding: 1.75rem 2rem;
-            border-left: 2px solid var(--gold);
-            background: var(--parchment);
-        }
-
-        .fp-statement p {
-            font-family: var(--font-display);
-            font-size: 1.3rem;
-            font-weight: 300;
-            font-style: italic;
-            color: var(--navy);
-            line-height: 1.55;
-        }
-
-        .french-problem-right {
-            padding-top: 0.5rem;
-        }
-
-        .fp-scenarios {
-            display: flex;
-            flex-direction: column;
-            gap: 0;
-        }
-
-        .fp-scenario {
-            display: grid;
-            grid-template-columns: 3rem 1fr;
-            gap: 1.25rem;
-            padding: 1.5rem 0;
-            border-bottom: 1px solid var(--border);
-            align-items: start;
-        }
-
-        .fp-scenario:first-child {
-            border-top: 1px solid var(--border);
-        }
-
-        .fp-scenario-icon {
-            width: 3rem;
-            height: 3rem;
-            border: 1px solid var(--border);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            font-family: var(--font-display);
-            font-size: 1.1rem;
-            color: var(--gold);
-            background: var(--white);
-        }
-
-        .fp-scenario-title {
-            font-family: var(--font-display);
-            font-size: 1.1rem;
-            font-weight: 400;
-            color: var(--navy);
-            margin-bottom: 0.35rem;
-            line-height: 1.2;
-        }
-
-        .fp-scenario-desc {
-            font-size: 0.87rem;
-            color: var(--muted);
-            line-height: 1.8;
         }
 
         /* FRENCH WORLD */
@@ -1616,7 +1489,6 @@
             .intro-grid,
             .why-grid,
             .cta-inner,
-            .french-problem-inner,
             .interp-layout {
                 grid-template-columns: 1fr;
             }
@@ -1662,11 +1534,6 @@
 
             .fw-bottom .btn-primary {
                 align-self: flex-start;
-            }
-
-            .french-problem::after {
-                right: -1rem;
-                opacity: 0.03;
             }
 
             .cred-grid,
@@ -1798,8 +1665,7 @@
                 </p>
                 <p>
                     A word-for-word French translation can mislead. A legally inaccurate translation can cost you a
-                    case,
-                    a deal, or a relationship. I specialize in bringing the <em>full weight</em> of your original
+                    case, a deal, or a relationship. I specialize in bringing the <em>full weight</em> of your original
                     document into French—or back into English—with zero ambiguity left behind.
                 </p>
                 <p>
@@ -1825,8 +1691,7 @@
             <div class="services-header reveal">
                 <h2>French translation<br>for every <em>context</em></h2>
                 <p class="lead">
-                    Each domain has its own
-                    vocabulary, conventions, and stakes. Here's where I specialize.
+                    Each domain has its own vocabulary, conventions, and stakes. Here's where I specialize.
                 </p>
             </div>
             <div class="services-grid">
@@ -1881,20 +1746,9 @@
                     <a class="service-link" href="https://www.melioratranslationservices.com/ebook-translation">Explore
                         eBook Translation →</a>
                 </div>
+                <!-- SWAPPED: Real Estate is now 05, Interpretation is now 06 -->
                 <div class="service-card reveal" style="transition-delay:0.1s">
                     <div class="service-num">05</div>
-                    <h3 class="service-title">Interpretation Services</h3>
-                    <p class="service-desc">
-                        Live French interpretation for immigration interviews, depositions, business meetings,
-                        medical appointments, and real estate closings. Trusted by immigration attorneys
-                        across the region.
-                    </p>
-                    <a class="service-link"
-                        href="https://www.melioratranslationservices.com/interpretation-service">Explore Interpretation
-                        →</a>
-                </div>
-                <div class="service-card reveal" style="transition-delay:0.2s">
-                    <div class="service-num">06</div>
                     <h3 class="service-title">Real Estate Translation</h3>
                     <p class="service-desc">
                         Property listings, lease agreements, purchase contracts, and appraisal reports
@@ -1906,16 +1760,28 @@
                         href="https://www.melioratranslationservices.com/real-estate-translation">Explore Real Estate
                         Translation →</a>
                 </div>
+                <div class="service-card reveal" style="transition-delay:0.2s">
+                    <div class="service-num">06</div>
+                    <h3 class="service-title">Interpretation Services</h3>
+                    <p class="service-desc">
+                        Live French interpretation for immigration interviews, depositions, business meetings,
+                        medical appointments, and real estate closings. Trusted by immigration attorneys
+                        across the region.
+                    </p>
+                    <a class="service-link"
+                        href="https://www.melioratranslationservices.com/interpretation-service">Explore Interpretation
+                        →</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- ── INTERPRETATION — FEATURED SECTION ───────────────────────────── -->
+    <!-- INTERPRETATION — FEATURED SECTION -->
     <section class="interpretation-section" id="interpretation">
         <div class="container">
             <div class="interp-layout">
                 <div class="interp-left reveal">
-                    <h2>Not everything important<br>is written <em>down.</em></h2>
+                    <h2>Excellent interpretation<br>means <em>no word left behind.</em></h2>
                     <p class="lead">
                         Some of the highest-stakes conversations happen out loud — a deposition, an immigration
                         interview, an appointment where the wrong word changes everything. Interpretation puts a skilled
@@ -1932,9 +1798,7 @@
                     <div class="interp-card">
                         <div class="interp-card-icon">I</div>
                         <div>
-                            <div class="interp-card-title">
-                                Immigration Interviews
-                            </div>
+                            <div class="interp-card-title">Immigration Interviews</div>
                             <p class="interp-card-desc">
                                 USCIS interviews, asylum hearings, consular appointments—the stakes
                                 couldn't be higher. I interpret with precision and composure, ensuring
@@ -1984,13 +1848,12 @@
         </div>
     </section>
 
-    <!-- ── CREDIBILITY SECTION ──────────────────────────────────────────── -->
+    <!-- CREDIBILITY SECTION -->
     <section class="credibility-section">
         <div class="container">
             <div class="cred-header reveal">
                 <h2>Trusted by attorneys,<br>physicians, and <em>families.</em></h2>
             </div>
-
             <div class="cred-bottom">
                 <div class="cred-stat reveal">
                     <div class="cred-stat-num">5★</div>
@@ -2049,55 +1912,7 @@
         </div>
     </section>
 
-    <!-- FRENCH PROBLEM -->
-    <section class="french-problem">
-        <div class="container">
-            <div class="french-problem-inner">
-                <div class="french-problem-left reveal">
-                    <h2>French doesn't<br>just mean<br><em>French.</em></h2>
-                    <div class="fp-statement">
-                        <p>The same sentence, translated correctly into French, can still be read three different ways
-                            depending on where your reader—or listener—sits: Paris, Montréal, or Abidjan.</p>
-                    </div>
-                </div>
-                <div class="french-problem-right reveal" style="transition-delay:0.15s">
-                    <div class="fp-scenarios">
-                        <div class="fp-scenario">
-                            <div class="fp-scenario-icon">I</div>
-                            <div>
-                                <div class="fp-scenario-title">When the register is wrong</div>
-                                <p class="fp-scenario-desc">Legal French in France leans formal and precise. In Québec,
-                                    statutory language follows its own civil law tradition. Using the wrong register in
-                                    the wrong jurisdiction doesn't just sound off—it raises questions about the
-                                    document's authority.</p>
-                            </div>
-                        </div>
-                        <div class="fp-scenario">
-                            <div class="fp-scenario-icon">II</div>
-                            <div>
-                                <div class="fp-scenario-title">When idiom doesn't travel</div>
-                                <p class="fp-scenario-desc">A phrase that's perfectly natural in English can arrive in
-                                    French sounding literal, cold, or unintentionally humorous. In a marketing campaign,
-                                    that's a missed connection. In a medical document or immigration interview, it's a
-                                    liability.</p>
-                            </div>
-                        </div>
-                        <div class="fp-scenario">
-                            <div class="fp-scenario-icon">III</div>
-                            <div>
-                                <div class="fp-scenario-title">When terminology shifts meaning</div>
-                                <p class="fp-scenario-desc">A single term—"contrat," "accord," "convention"—carries
-                                    different legal weight depending on the French-speaking jurisdiction. I don't guess.
-                                    I research, verify, and translate with the precision your document demands.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FRENCH WORLD -->
+    <!-- FRENCH WORLD — kept as requested -->
     <section class="french-world">
         <div class="container">
             <div class="fw-header reveal">
@@ -2122,8 +1937,7 @@
                     <div class="fw-strip-translation">Offer to Purchase</div>
                     <div class="fw-strip-note">The Québec real estate system operates under the Civil Code—meaning
                         <em>promesse d'achat</em> is a binding legal instrument with obligations not captured by simply
-                        writing "offer."
-                    </div>
+                        writing "offer."</div>
                 </div>
                 <div class="fw-strip reveal" style="transition-delay:0.16s">
                     <div class="fw-strip-locale">Clinical · Medical</div>
@@ -2256,4 +2070,4 @@
     </script>
 </body>
 
-</html>C:\Users\user\french-translation\v2.html
+</html>
