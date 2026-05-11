@@ -1147,6 +1147,29 @@
             line-height: 1.85;
         }
 
+        .why-grid--compact {
+            grid-template-columns: 1fr;
+            gap: 0;
+        }
+
+        .why-grid--compact .why-item {
+            padding: 1.6rem 0;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .why-grid--compact .why-item-num {
+            margin-bottom: 0;
+            flex-shrink: 0;
+            min-width: 2rem;
+        }
+
+        .why-grid--compact .why-item-title {
+            margin-bottom: 0;
+            font-size: 1.6rem;
+        }
+
         /* FRENCH WORLD */
         .french-world {
             background: var(--navy);
@@ -1165,6 +1188,17 @@
         .french-world .container {
             position: relative;
             z-index: 1;
+        }
+
+        .fw-intro {
+            font-family: var(--font-body);
+            font-size: 0.82rem;
+            font-weight: 400;
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+            color: var(--rose-grey);
+            margin-bottom: 1.4rem;
+            opacity: 0.75;
         }
 
         .fw-header {
@@ -1879,34 +1913,22 @@
                 <p class="lead">There's no shortage of translation tools and services. Here's what you actually get when
                     you work with Meliora.</p>
             </div>
-            <div class="why-grid">
+            <div class="why-grid why-grid--compact">
                 <div class="why-item reveal">
                     <div class="why-item-num">01</div>
                     <div class="why-item-title">Legal &amp; Cultural Fluency</div>
-                    <p class="why-item-desc">I don't just speak French—I understand how legal language works across
-                        jurisdictions. What's enforceable in Québec reads differently than in France. Every translation
-                        and interpretation is adapted to the legal culture and setting it will be used in.</p>
                 </div>
                 <div class="why-item reveal" style="transition-delay:0.1s">
                     <div class="why-item-num">02</div>
                     <div class="why-item-title">Nothing Gets Glossed Over</div>
-                    <p class="why-item-desc">The fine print is where errors hide—and in interpretation, a hesitation or
-                        mistranslation can derail an entire proceeding. I stay precise under pressure, whether reading a
-                        clause or relaying a question in real time.</p>
                 </div>
                 <div class="why-item reveal" style="transition-delay:0.15s">
                     <div class="why-item-num">03</div>
                     <div class="why-item-title">Deadlines Kept, Always</div>
-                    <p class="why-item-desc">Legal and immigration timelines don't move for anyone. You'll receive your
-                        translation when promised and your interpreter will be there when scheduled—with updates along
-                        the way, no chasing required.</p>
                 </div>
                 <div class="why-item reveal" style="transition-delay:0.2s">
                     <div class="why-item-num">04</div>
                     <div class="why-item-title">Complete Confidentiality</div>
-                    <p class="why-item-desc">Every document and every conversation is treated with the same discretion a
-                        lawyer extends to client files. Immigration cases, medical records, business negotiations—your
-                        information never leaves the room.</p>
                 </div>
             </div>
         </div>
@@ -1916,11 +1938,12 @@
     <section class="french-world">
         <div class="container">
             <div class="fw-header reveal">
+                <p class="fw-intro">Not all French is the same—and neither is the expertise required to translate it.
+                </p>
                 <div class="section-label">The language behind the language</div>
-                <h2>French carries<br><em>culture</em> in every word</h2>
-                <p class="lead">Every dialect, region, and professional field brings its own French to the table.
-                    Knowing the language is the starting point—knowing its world is what makes translation and
-                    interpretation work.</p>
+                <h2>Every word carries<br><em>a world behind it</em></h2>
+                <p class="lead">Québec French isn't Parisian French. Legal French isn't medical French. Knowing the
+                    language is just the entry point—what happens inside the words is where the real work begins.</p>
             </div>
             <div class="fw-strips">
                 <div class="fw-strip reveal">
@@ -1937,7 +1960,8 @@
                     <div class="fw-strip-translation">Offer to Purchase</div>
                     <div class="fw-strip-note">The Québec real estate system operates under the Civil Code—meaning
                         <em>promesse d'achat</em> is a binding legal instrument with obligations not captured by simply
-                        writing "offer."</div>
+                        writing "offer."
+                    </div>
                 </div>
                 <div class="fw-strip reveal" style="transition-delay:0.16s">
                     <div class="fw-strip-locale">Clinical · Medical</div>
@@ -2029,7 +2053,8 @@
             <li><a href="https://www.melioratranslationservices.com/marketing-transcreation">Medical Transcreation</a>
             </li>
             <li><a href="https://www.melioratranslationservices.com/ebook-translation">eBook</a></li>
-            <li><a href="https://www.melioratranslationservices.com/marketing-transcreation">Marketing Transcreation</a>
+            <li><a href="https://www.melioratranslationservices.com/marketing-transcreation">Marketing
+                    Transcreation.</a>
             </li>
             <li><a href="https://www.melioratranslationservices.com/interpretation-service">Interpretation</a></li>
             <li><a href="https://www.melioratranslationservices.com/real-estate-translation">Real Estate</a></li>
