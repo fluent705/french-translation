@@ -405,41 +405,38 @@
 
         h1 {
             font-family: var(--f-display);
-            font-weight: 500;
-            line-height: 1.0;
-            letter-spacing: -.02em;
+            font-weight: 400;
+            line-height: 1.08;
+            letter-spacing: -.01em;
             color: var(--forest);
             margin-bottom: 1.6rem;
         }
 
-        .h1-line {
+        .h1-dir {
             display: block;
-        }
-
-        .h1-line-sm {
-            font-size: clamp(2.4rem, 4.2vw, 4rem);
+            font-size: clamp(1.5rem, 2.6vw, 2.2rem);
             font-weight: 400;
-            color: var(--forest);
-            letter-spacing: -.01em;
+            letter-spacing: .01em;
+            color: var(--muted);
+            line-height: 1.3;
         }
 
-        .h1-line-lg {
-            font-size: clamp(3.8rem, 7vw, 6.8rem);
-            font-weight: 600;
+        .h1-sep {
+            display: block;
+            width: 32px;
+            height: 1px;
+            background: var(--gold);
+            margin: .6rem 0;
+        }
+
+        .h1-main {
+            display: block;
+            font-size: clamp(4rem, 7.5vw, 7rem);
+            font-weight: 500;
             font-style: italic;
             color: var(--forest);
-            letter-spacing: -.03em;
-            line-height: .96;
-        }
-
-        .h1-line-lg em {
-            color: var(--gold);
-            font-style: italic;
-        }
-
-        .h1-amp {
-            color: var(--gold);
-            font-style: normal;
+            line-height: .95;
+            letter-spacing: -.02em;
         }
 
         h1 em {
@@ -1706,7 +1703,7 @@
 
         .creds-header-right {
             font-size: .88rem;
-            color: rgba(255,255,255,.42);
+            color: rgba(255, 255, 255, .42);
             line-height: 1.75;
             max-width: 380px;
         }
@@ -1804,7 +1801,7 @@
             font-family: var(--f-display);
             font-size: 28rem;
             line-height: 1;
-            color: rgba(255,255,255,.025);
+            color: rgba(255, 255, 255, .025);
             pointer-events: none;
         }
 
@@ -1857,7 +1854,7 @@
 
         .reviews-rating-text {
             font-size: .72rem;
-            color: rgba(255,255,255,.55);
+            color: rgba(255, 255, 255, .55);
             font-weight: 400;
             letter-spacing: .04em;
         }
@@ -1879,7 +1876,7 @@
         /* featured pull quote */
         .review-featured {
             margin-bottom: 1.5px;
-            background: rgba(255,255,255,.035);
+            background: rgba(255, 255, 255, .035);
             padding: 3rem 3.2rem;
             position: relative;
             border-left: 2px solid var(--gold);
@@ -1887,7 +1884,7 @@
         }
 
         .review-featured:hover {
-            background: rgba(255,255,255,.055);
+            background: rgba(255, 255, 255, .055);
         }
 
         .review-featured-text {
@@ -1895,7 +1892,7 @@
             font-size: clamp(1.35rem, 2.4vw, 2rem);
             font-style: italic;
             font-weight: 500;
-            color: rgba(255,255,255,.88);
+            color: rgba(255, 255, 255, .88);
             line-height: 1.55;
             margin-bottom: 1.6rem;
         }
@@ -1920,20 +1917,20 @@
         .review-featured-name {
             font-size: .78rem;
             font-weight: 500;
-            color: rgba(255,255,255,.7);
+            color: rgba(255, 255, 255, .7);
         }
 
         .review-featured-service {
             font-size: .62rem;
             letter-spacing: .1em;
             text-transform: uppercase;
-            color: rgba(255,255,255,.3);
+            color: rgba(255, 255, 255, .3);
         }
 
         .review-featured-divider {
             width: 1px;
             height: 20px;
-            background: rgba(154,114,53,.3);
+            background: rgba(154, 114, 53, .3);
         }
 
         /* smaller cards grid */
@@ -1945,7 +1942,7 @@
         }
 
         .review-card {
-            background: rgba(255,255,255,.03);
+            background: rgba(255, 255, 255, .03);
             padding: 2rem 1.8rem;
             display: flex;
             flex-direction: column;
@@ -1954,7 +1951,7 @@
         }
 
         .review-card:hover {
-            background: rgba(255,255,255,.055);
+            background: rgba(255, 255, 255, .055);
         }
 
         .review-card-top {
@@ -1973,8 +1970,8 @@
             font-size: .55rem;
             letter-spacing: .16em;
             text-transform: uppercase;
-            color: rgba(255,255,255,.25);
-            border: 1px solid rgba(154,114,53,.2);
+            color: rgba(255, 255, 255, .25);
+            border: 1px solid rgba(154, 114, 53, .2);
             padding: .15rem .55rem;
         }
 
@@ -1982,7 +1979,7 @@
             font-family: var(--f-display);
             font-size: 1rem;
             font-style: italic;
-            color: rgba(255,255,255,.65);
+            color: rgba(255, 255, 255, .65);
             line-height: 1.65;
             flex: 1;
         }
@@ -1992,14 +1989,14 @@
             align-items: center;
             gap: .75rem;
             padding-top: .85rem;
-            border-top: 1px solid rgba(154,114,53,.12);
+            border-top: 1px solid rgba(154, 114, 53, .12);
         }
 
         .review-initial {
             width: 30px;
             height: 30px;
-            background: rgba(154,114,53,.15);
-            border: 1px solid rgba(154,114,53,.25);
+            background: rgba(154, 114, 53, .15);
+            border: 1px solid rgba(154, 114, 53, .25);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -2019,14 +2016,14 @@
         .review-attr-name {
             font-size: .76rem;
             font-weight: 500;
-            color: rgba(255,255,255,.6);
+            color: rgba(255, 255, 255, .6);
         }
 
         .review-attr {
             font-size: .6rem;
             letter-spacing: .08em;
             text-transform: uppercase;
-            color: rgba(255,255,255,.28);
+            color: rgba(255, 255, 255, .28);
         }
 
         @media (max-width: 980px) {
@@ -2343,6 +2340,403 @@
                 border-bottom: 1px solid var(--border);
             }
         }
+
+        /* ── SAMPLE TRANSLATIONS ── */
+        .samples-sec {
+            padding: clamp(5rem, 10vw, 8rem) 0;
+            background: var(--paper-deep);
+            border-top: 1px solid var(--border);
+        }
+
+        .samples-head {
+            max-width: 640px;
+            margin-bottom: 3rem;
+        }
+
+        .samples-head h2 {
+            font-family: var(--f-display);
+            font-size: clamp(2.2rem, 3.8vw, 3.3rem);
+            font-weight: 500;
+            line-height: 1.08;
+            color: var(--forest);
+            margin-bottom: .8rem;
+        }
+
+        .samples-head h2 em {
+            font-style: italic;
+            color: var(--gold);
+        }
+
+        .samples-head p {
+            font-size: .92rem;
+            color: var(--muted);
+            line-height: 1.82;
+        }
+
+        /* tab bar */
+        .samples-tabs {
+            display: flex;
+            margin-bottom: 2.5rem;
+            border-bottom: 1px solid var(--border-mid);
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+
+        .samples-tabs::-webkit-scrollbar {
+            display: none;
+        }
+
+        .sample-tab {
+            display: flex;
+            flex-direction: column;
+            gap: .16rem;
+            padding: .85rem 1.45rem;
+            background: none;
+            border: none;
+            border-bottom: 2px solid transparent;
+            cursor: pointer;
+            text-align: left;
+            flex-shrink: 0;
+            transition: border-color .2s;
+            margin-bottom: -1px;
+            font-family: inherit;
+        }
+
+        .sample-tab:hover .sample-tab-fr {
+            color: var(--gold);
+        }
+
+        .sample-tab.active {
+            border-bottom-color: var(--gold);
+        }
+
+        .sample-tab.active .sample-tab-fr {
+            color: var(--gold);
+        }
+
+        .sample-tab-fr {
+            font-family: var(--f-display);
+            font-size: .92rem;
+            font-style: italic;
+            color: var(--forest);
+            line-height: 1.2;
+            transition: color .2s;
+        }
+
+        .sample-tab-en {
+            font-size: .55rem;
+            letter-spacing: .16em;
+            text-transform: uppercase;
+            color: var(--muted-light);
+        }
+
+        /* panel */
+        .samples-panel {
+            display: none;
+        }
+
+        .samples-panel.active {
+            display: grid;
+            grid-template-columns: 1.15fr 1fr;
+            gap: 2.5rem;
+            align-items: start;
+        }
+
+        /* document frame mock-up */
+        .sample-doc-frame {
+            background: var(--white);
+            border: 1px solid var(--border-mid);
+            border-top: 3px solid var(--gold);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sample-doc-frame::after {
+            content: 'ÉCHANTILLON';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-22deg);
+            font-family: var(--f-display);
+            font-size: 4.5rem;
+            font-weight: 600;
+            letter-spacing: .28em;
+            color: rgba(154, 114, 53, .055);
+            pointer-events: none;
+            z-index: 1;
+            white-space: nowrap;
+        }
+
+        .sample-doc-top {
+            padding: .75rem 1.3rem;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .sample-doc-type-label {
+            font-size: .58rem;
+            letter-spacing: .2em;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 500;
+        }
+
+        .sample-doc-badge {
+            font-size: .55rem;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            color: var(--muted-light);
+            background: var(--paper);
+            border: 1px solid var(--border);
+            padding: .18rem .6rem;
+            white-space: nowrap;
+        }
+
+        .sample-doc-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .sample-doc-col {
+            padding: 1.1rem 1.3rem 1.4rem;
+            position: relative;
+        }
+
+        .sample-doc-col+.sample-doc-col {
+            border-left: 1px solid var(--border);
+        }
+
+        .sample-col-lang {
+            display: flex;
+            align-items: center;
+            gap: .4rem;
+            font-size: .54rem;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            color: var(--muted-light);
+            margin-bottom: .9rem;
+        }
+
+        .sample-col-lang::before {
+            content: '';
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: var(--gold);
+            opacity: .6;
+            flex-shrink: 0;
+        }
+
+        /* placeholder image box */
+        .sample-img-box {
+            background: var(--paper-deep);
+            border: 1px dashed rgba(154, 114, 53, .32);
+            height: 96px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: .35rem;
+            margin-bottom: .9rem;
+        }
+
+        .sample-img-box-icon {
+            width: 22px;
+            height: 26px;
+            border: 1.5px solid rgba(154, 114, 53, .35);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .sample-img-box-icon::before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            right: -1px;
+            width: 7px;
+            height: 7px;
+            background: var(--paper-deep);
+            border-left: 1.5px solid rgba(154, 114, 53, .35);
+            border-bottom: 1.5px solid rgba(154, 114, 53, .35);
+        }
+
+        .sample-img-box span {
+            font-size: .54rem;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            color: var(--muted-light);
+        }
+
+        /* skeleton lines */
+        .sk {
+            height: 6px;
+            border-radius: 1px;
+            background: var(--paper-deep);
+            margin-bottom: .42rem;
+        }
+
+        .sk.w-full {
+            width: 100%;
+        }
+
+        .sk.w-8 {
+            width: 82%;
+        }
+
+        .sk.w-6 {
+            width: 60%;
+        }
+
+        .sk.w-4 {
+            width: 42%;
+        }
+
+        .sk.w-3 {
+            width: 30%;
+        }
+
+        /* bottom cert strip */
+        .sample-cert-strip {
+            padding: .65rem 1.3rem;
+            border-top: 1px solid var(--border);
+            background: var(--paper);
+            display: flex;
+            align-items: center;
+            gap: .6rem;
+        }
+
+        .sample-cert-check {
+            font-size: .7rem;
+            color: var(--gold);
+            flex-shrink: 0;
+        }
+
+        .sample-cert-text {
+            font-size: .6rem;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: var(--muted);
+        }
+
+        /* right info panel */
+        .sample-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.6rem;
+        }
+
+        .sample-info-kicker {
+            font-size: .6rem;
+            letter-spacing: .2em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: .3rem;
+        }
+
+        .sample-info-title {
+            font-family: var(--f-display);
+            font-size: clamp(1.5rem, 2.5vw, 2rem);
+            font-weight: 500;
+            font-style: italic;
+            color: var(--forest);
+            line-height: 1.18;
+        }
+
+        .sample-info-fr {
+            font-size: .72rem;
+            letter-spacing: .06em;
+            color: var(--muted-light);
+            margin-top: .2rem;
+        }
+
+        .sample-info-desc {
+            font-size: .88rem;
+            color: var(--muted);
+            line-height: 1.8;
+        }
+
+        .sample-uses-label {
+            font-size: .58rem;
+            letter-spacing: .2em;
+            text-transform: uppercase;
+            color: var(--muted-light);
+            margin-bottom: .55rem;
+        }
+
+        .sample-uses {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5px;
+            background: var(--border);
+        }
+
+        .sample-use-row {
+            background: var(--white);
+            padding: .68rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: .65rem;
+            font-size: .8rem;
+            color: var(--ink-soft);
+            line-height: 1.45;
+        }
+
+        .sample-use-row::before {
+            content: '';
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background: var(--gold);
+            flex-shrink: 0;
+            opacity: .75;
+        }
+
+        .sample-placeholder-note {
+            padding: .8rem 1.1rem;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-left: 2px solid var(--gold-pale);
+            font-size: .75rem;
+            color: var(--muted);
+            line-height: 1.65;
+        }
+
+        .sample-placeholder-note strong {
+            color: var(--ink-soft);
+            font-weight: 500;
+            display: block;
+            margin-bottom: .2rem;
+            font-size: .68rem;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 900px) {
+            .samples-panel.active {
+                grid-template-columns: 1fr;
+            }
+
+            .sample-tab {
+                padding: .72rem 1rem;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .sample-doc-split {
+                grid-template-columns: 1fr;
+            }
+
+            .sample-doc-col+.sample-doc-col {
+                border-left: none;
+                border-top: 1px solid var(--border);
+            }
+        }
     </style>
 </head>
 
@@ -2376,11 +2770,14 @@
     <section class="hero" aria-labelledby="h1">
         <div class="reveal">
             <h1>
-                <span class="h1-line h1-line-sm">French-to-English</span>
-                <span class="h1-line h1-line-lg"><em class="h1-amp">&amp;</em> English-to-French</span>
-                <span class="h1-line h1-line-lg"><em>Translation</em></span>
+                <span class="h1-dir">French-to-English &amp; English-to-French</span>
+                <span class="h1-sep"></span>
+                <span class="h1-main"><em>Translation</em></span>
             </h1>
-            <p class="hero-sub">Certified French translation accepted by USCIS, courts, schools, and government agencies. Legal, immigration, medical, real estate, and business documents — both directions. Live interpretation for interviews, depositions, and appointments. You deal directly with the translator, not an agency.</p>
+            <p class="hero-sub">Certified French translation accepted by USCIS, courts, schools, and government
+                agencies. Legal, immigration, medical, real estate, and business documents — both directions. Live
+                interpretation for interviews, depositions, and appointments. You deal directly with the translator, not
+                an agency.</p>
             <div class="hero-actions">
                 <a class="btn btn-solid" href="https://www.melioratranslationservices.com/get-a-quote">Request a Free
                     Quote</a>
@@ -2781,7 +3178,8 @@
                     <p class="about-lead">The credential is one thing. The understanding is another. Nene has
                         <strong>lived and worked in France, Senegal, Canada, and the United States</strong> — which
                         means she knows how French is actually used across four different legal and cultural contexts,
-                        not just how it looks in a textbook.</p>
+                        not just how it looks in a textbook.
+                    </p>
                     <p class="about-lead">She specialises in legal, immigration, and medical translation — the contexts
                         where a mistake isn't just an embarrassment. It has consequences. Every document that leaves her
                         desk carries her name and her signature.</p>
@@ -2852,6 +3250,454 @@
             </div>
         </div>
     </section>
+
+    <!-- SAMPLE TRANSLATIONS -->
+    <section class="samples-sec" aria-labelledby="samples-h2" id="samples">
+        <div class="wrap">
+
+            <div class="samples-head reveal">
+                <span class="eyebrow">Sample Translations</span>
+                <span class="rule"></span>
+                <h2 id="samples-h2">What a certified French<br>translation <em>looks like</em></h2>
+                <p>The most commonly requested documents — shown in Meliora's certified bilingual format, accepted by
+                    USCIS, courts, and government agencies. Translation samples are placeholders and will be updated
+                    with actual certified document samples.</p>
+            </div>
+
+            <!-- Tab navigation -->
+            <div class="samples-tabs reveal" style="transition-delay:.07s" role="tablist"
+                aria-label="Document sample types">
+                <button class="sample-tab active" role="tab" aria-selected="true" aria-controls="sample-birth"
+                    onclick="switchSample(this,'birth')">
+                    <span class="sample-tab-fr">Acte de naissance</span>
+                    <span class="sample-tab-en">Birth Certificate</span>
+                </button>
+                <button class="sample-tab" role="tab" aria-selected="false" aria-controls="sample-marriage"
+                    onclick="switchSample(this,'marriage')">
+                    <span class="sample-tab-fr">Acte de mariage</span>
+                    <span class="sample-tab-en">Marriage Certificate</span>
+                </button>
+                <button class="sample-tab" role="tab" aria-selected="false" aria-controls="sample-diploma"
+                    onclick="switchSample(this,'diploma')">
+                    <span class="sample-tab-fr">Diplôme / Relevé</span>
+                    <span class="sample-tab-en">Diploma &amp; Transcript</span>
+                </button>
+                <button class="sample-tab" role="tab" aria-selected="false" aria-controls="sample-death"
+                    onclick="switchSample(this,'death')">
+                    <span class="sample-tab-fr">Acte de décès</span>
+                    <span class="sample-tab-en">Death Certificate</span>
+                </button>
+                <button class="sample-tab" role="tab" aria-selected="false" aria-controls="sample-police"
+                    onclick="switchSample(this,'police')">
+                    <span class="sample-tab-fr">Casier judiciaire</span>
+                    <span class="sample-tab-en">Police Clearance</span>
+                </button>
+                <button class="sample-tab" role="tab" aria-selected="false" aria-controls="sample-medical"
+                    onclick="switchSample(this,'medical')">
+                    <span class="sample-tab-fr">Dossier médical</span>
+                    <span class="sample-tab-en">Medical Record</span>
+                </button>
+            </div>
+
+            <!-- ── Birth Certificate ── -->
+            <div class="samples-panel active reveal" id="sample-birth" role="tabpanel" style="transition-delay:.13s">
+                <div class="sample-doc-frame">
+                    <div class="sample-doc-top">
+                        <span class="sample-doc-type-label">Acte de naissance — Birth Certificate</span>
+                        <span class="sample-doc-badge">Certified · FR → EN</span>
+                    </div>
+                    <div class="sample-doc-split">
+                        <div class="sample-doc-col">
+                            <div class="sample-col-lang">Original — Français</div>
+                            <div class="sample-img-box">
+                                <div class="sample-img-box-icon"></div>
+                                <span>Document à insérer</span>
+                            </div>
+                            <div class="sk w-8"></div>
+                            <div class="sk w-full"></div>
+                            <div class="sk w-6"></div>
+                            <div class="sk w-full"></div>
+                            <div class="sk w-3"></div>
+                        </div>
+                        <div class="sample-doc-col">
+                            <div class="sample-col-lang">Translation — English</div>
+                            <div class="sample-img-box">
+                                <div class="sample-img-box-icon"></div>
+                                <span>Sample to be added</span>
+                            </div>
+                            <div class="sk w-full"></div>
+                            <div class="sk w-8"></div>
+                            <div class="sk w-full"></div>
+                            <div class="sk w-6"></div>
+                            <div class="sk w-4"></div>
+                        </div>
+                    </div>
+                    <div class="sample-cert-strip">
+                        <span class="sample-cert-check">✓</span>
+                        <span class="sample-cert-text">Includes signed certification statement of accuracy &amp;
+                            completeness</span>
+                    </div>
+                </div>
+                <div class="sample-info">
+                    <div>
+                        <div class="sample-info-kicker">Document type</div>
+                        <div class="sample-info-title">Birth Certificate</div>
+                        <div class="sample-info-fr">Acte de naissance · État civil</div>
+                    </div>
+                    <p class="sample-info-desc">Birth certificates issued by the État civil — whether from metropolitan
+                        France, Québec, or a Francophone African country — are among the most frequently certified
+                        documents. Layout, terminology, and format vary significantly between issuing countries; the
+                        translation accounts for each.</p>
+                    <div>
+                        <div class="sample-uses-label">Commonly submitted to</div>
+                        <div class="sample-uses">
+                            <div class="sample-use-row">USCIS immigration applications</div>
+                            <div class="sample-use-row">Passport and consular services</div>
+                            <div class="sample-use-row">School and university enrollment</div>
+                            <div class="sample-use-row">Dual citizenship applications</div>
+                        </div>
+                    </div>
+                    <div class="sample-placeholder-note">
+                        <strong>Placeholder</strong>
+                        A certified translation sample will be placed here. The document layout shown reflects Meliora's
+                        standard bilingual certified format.
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── Marriage Certificate ── -->
+            <div class="samples-panel" id="sample-marriage" role="tabpanel">
+                <div class="sample-doc-frame">
+                    <div class="sample-doc-top">
+                        <span class="sample-doc-type-label">Acte de mariage — Marriage Certificate</span>
+                        <span class="sample-doc-badge">Certified · FR → EN</span>
+                    </div>
+                    <div class="sample-doc-split">
+                        <div class="sample-doc-col">
+                            <div class="sample-col-lang">Original — Français</div>
+                            <div class="sample-img-box">
+                                <div class="sample-img-box-icon"></div>
+                                <span>Document à insérer</span>
+                            </div>
+                            <div class="sk w-full"></div>
+                            <div class="sk w-6"></div>
+                            <div class="sk w-8"></div>
+                            <div class="sk w-full"></div>
+                            <div class="sk w-4"></div>
+                        </div>
+                        <div class="sample-doc-col">
+                            <div class="sample-col-lang">Translation — English</div>
+                            <div class="sample-img-box">
+                                <div class="sample-img-box-icon"></div>
+                                <span>Sample to be added</span>
+                            </div>
+                            <div class="sk w-8"></div>
+                            <div class="sk w-full"></div>
+                            <div class="sk w-3"></div>
+                            <div class="sk w-full"></div>
+                            <div class="sk w-6"></div>
+                        </div>
+                    </div>
+                    <div class="sample-cert-strip">
+                        <span class="sample-cert-check">✓</span>
+                        <span class="sample-cert-text">Includes signed certification statement of accuracy &amp;
+                            completeness</span>
+                    </div>
+                </div>
+                <div class="sample-info">
+                    <div>
+                        <div class="sample-info-kicker">Document type</div>
+                        <div class="sample-info-title">Marriage Certificate</div>
+                        <div class="sample-info-fr">Acte de mariage · État civil</div>
+                    </div>
+                    <p class="sample-info-desc">French marriage certificates range from the standardised livret de
+                        famille to certificates issued across Francophone West Africa and Canada. Certified translation
+                        preserves all names, dates, civil registry details, and official notations with precision.</p>
+                    <div>
+                        <div class="sample-uses-label">Commonly submitted to</div>
+                        <div class="sample-uses">
+                            <div class="sample-use-row">USCIS spousal and family visa applications</div>
+                            <div class="sample-use-row">Name change proceedings</div>
+                            <div class="sample-use-row">Inheritance and estate matters</div>
+                            <div class="sample-use-row">Consular and passport applications</div>
+                        </div>
+                    </div>
+                    <div class="sample-placeholder-note">
+                        <strong>Placeholder</strong>
+                        A certified translation sample will be placed here. The document layout shown reflects Meliora's
+                        standard bilingual certified format.
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── Diploma / Transcript ── -->
+            <div class="samples-panel" id="sample-diploma" role="tabpanel">
+                <div class="sample-doc-frame">
+                    <div class="sample-doc-top">
+                        <span class="sample-doc-type-label">Diplôme / Relevé de notes — Diploma &amp; Transcript</span>
+                        <span class="sample-doc-badge">Certified · FR → EN</span>
+                    </div>
+                    <div class="sample-doc-split">
+                        <div class="sample-doc-col">
+                            <div class="sample-col-lang">Original — Français</div>
+                            <div class="sample-img-box">
+                                <div class="sample-img-box-icon"></div>
+                                <span>Document à insérer</span>
+                            </div>
+                            <div class="sk w-6"></div>
+                            <div class="sk w-full"></div>
+                            <div class="sk w-8"></div>
+                            <div class="sk w-full"></div>
+                            <div class="sk w-3"></div>
+                        </div>
+                        <div class="sample-doc-col">
+                            <div class="sample-col-lang">Translation — English</div>
+                            <div class="sample-img-box">
+                                <div class="sample-img-box-icon"></div>
+                                <span>Sample to be added</span>
+                            </div>
+                            <div class="sk w-full"></div>
+                            <div class="sk w-4"></div>
+                            <div class="sk w-8"></div>
+                            <div class="sk w-full"></div>
+                            <div class="sk w-6"></div>
+                        </div>
+                    </div>
+                    <div class="sample-cert-strip">
+                        <span class="sample-cert-check">✓</span>
+                        <span class="sample-cert-text">Includes signed certification statement of accuracy &amp;
+                            completeness</span>
+                    </div>
+                </div>
+                <div class="sample-info">
+                    <div>
+                        <div class="sample-info-kicker">Document type</div>
+                        <div class="sample-info-title">Diploma &amp; Academic Transcript</div>
+                        <div class="sample-info-fr">Diplôme / Relevé de notes · Établissement scolaire</div>
+                    </div>
+                    <p class="sample-info-desc">From the Baccalauréat to university diplomas, academic transcripts, and
+                        professional certificates — French academic credentials require certified translation for US
+                        school admission, credential evaluation, and professional licensing. Subject headings, grade
+                        scales, and institutional names are translated with precision.</p>
+                    <div>
+                        <div class="sample-uses-label">Commonly submitted to</div>
+                        <div class="sample-uses">
+                            <div class="sample-use-row">US colleges and universities</div>
+                            <div class="sample-use-row">WES and credential evaluation agencies</div>
+                            <div class="sample-use-row">Professional licensing boards</div>
+                            <div class="sample-use-row">USCIS education documentation</div>
+                        </div>
+                    </div>
+                    <div class="sample-placeholder-note">
+                        <strong>Placeholder</strong>
+                        A certified translation sample will be placed here. The document layout shown reflects Meliora's
+                        standard bilingual certified format.
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── Death Certificate ── -->
+            <div class="samples-panel" id="sample-death" role="tabpanel">
+                <div class="sample-doc-frame">
+                    <div class="sample-doc-top">
+                        <span class="sample-doc-type-label">Acte de décès — Death Certificate</span>
+                        <span class="sample-doc-badge">Certified · FR → EN</span>
+                    </div>
+                    <div class="sample-doc-split">
+                        <div class="sample-doc-col">
+                            <div class="sample-col-lang">Original — Français</div>
+                            <div class="sample-img-box">
+                                <div class="sample-img-box-icon"></div>
+                                <span>Document à insérer</span>
+                            </div>
+                            <div class="sk w-full"></div>
+                            <div class="sk w-8"></div>
+                            <div class="sk w-full"></div>
+                            <div class="sk w-4"></div>
+                            <div class="sk w-6"></div>
+                        </div>
+                        <div class="sample-doc-col">
+                            <div class="sample-col-lang">Translation — English</div>
+                            <div class="sample-img-box">
+                                <div class="sample-img-box-icon"></div>
+                                <span>Sample to be added</span>
+                            </div>
+                            <div class="sk w-6"></div>
+                            <div class="sk w-full"></div>
+                            <div class="sk w-8"></div>
+                            <div class="sk w-3"></div>
+                            <div class="sk w-full"></div>
+                        </div>
+                    </div>
+                    <div class="sample-cert-strip">
+                        <span class="sample-cert-check">✓</span>
+                        <span class="sample-cert-text">Includes signed certification statement of accuracy &amp;
+                            completeness</span>
+                    </div>
+                </div>
+                <div class="sample-info">
+                    <div>
+                        <div class="sample-info-kicker">Document type</div>
+                        <div class="sample-info-title">Death Certificate</div>
+                        <div class="sample-info-fr">Acte de décès · État civil</div>
+                    </div>
+                    <p class="sample-info-desc">French death certificates are required for a range of cross-border legal
+                        and administrative matters. Certified translation preserves all civil registry data — date,
+                        place, cause of death, and official seals — in the form required for legal submission in the US.
+                    </p>
+                    <div>
+                        <div class="sample-uses-label">Commonly submitted to</div>
+                        <div class="sample-uses">
+                            <div class="sample-use-row">Probate and estate courts</div>
+                            <div class="sample-use-row">Insurance and benefits claims</div>
+                            <div class="sample-use-row">USCIS survivorship applications</div>
+                            <div class="sample-use-row">Consular and embassy procedures</div>
+                        </div>
+                    </div>
+                    <div class="sample-placeholder-note">
+                        <strong>Placeholder</strong>
+                        A certified translation sample will be placed here. The document layout shown reflects Meliora's
+                        standard bilingual certified format.
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── Police Clearance ── -->
+            <div class="samples-panel" id="sample-police" role="tabpanel">
+                <div class="sample-doc-frame">
+                    <div class="sample-doc-top">
+                        <span class="sample-doc-type-label">Casier judiciaire — Police Clearance Certificate</span>
+                        <span class="sample-doc-badge">Certified · FR → EN</span>
+                    </div>
+                    <div class="sample-doc-split">
+                        <div class="sample-doc-col">
+                            <div class="sample-col-lang">Original — Français</div>
+                            <div class="sample-img-box">
+                                <div class="sample-img-box-icon"></div>
+                                <span>Document à insérer</span>
+                            </div>
+                            <div class="sk w-8"></div>
+                            <div class="sk w-full"></div>
+                            <div class="sk w-3"></div>
+                            <div class="sk w-8"></div>
+                            <div class="sk w-full"></div>
+                        </div>
+                        <div class="sample-doc-col">
+                            <div class="sample-col-lang">Translation — English</div>
+                            <div class="sample-img-box">
+                                <div class="sample-img-box-icon"></div>
+                                <span>Sample to be added</span>
+                            </div>
+                            <div class="sk w-full"></div>
+                            <div class="sk w-6"></div>
+                            <div class="sk w-full"></div>
+                            <div class="sk w-4"></div>
+                            <div class="sk w-8"></div>
+                        </div>
+                    </div>
+                    <div class="sample-cert-strip">
+                        <span class="sample-cert-check">✓</span>
+                        <span class="sample-cert-text">Includes signed certification statement of accuracy &amp;
+                            completeness</span>
+                    </div>
+                </div>
+                <div class="sample-info">
+                    <div>
+                        <div class="sample-info-kicker">Document type</div>
+                        <div class="sample-info-title">Police Clearance Certificate</div>
+                        <div class="sample-info-fr">Casier judiciaire / Extrait de casier · Ministère de la Justice
+                        </div>
+                    </div>
+                    <p class="sample-info-desc">Police clearance certificates and criminal background records from
+                        France and Francophone countries are routinely required for immigration. Certified translation
+                        renders all official legal terminology accurately — including the specific absence-of-record
+                        language that agencies look for.</p>
+                    <div>
+                        <div class="sample-uses-label">Commonly submitted to</div>
+                        <div class="sample-uses">
+                            <div class="sample-use-row">USCIS green card and visa applications</div>
+                            <div class="sample-use-row">Employment background checks</div>
+                            <div class="sample-use-row">Professional licensing applications</div>
+                            <div class="sample-use-row">Immigration court proceedings</div>
+                        </div>
+                    </div>
+                    <div class="sample-placeholder-note">
+                        <strong>Placeholder</strong>
+                        A certified translation sample will be placed here. The document layout shown reflects Meliora's
+                        standard bilingual certified format.
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── Medical Record ── -->
+            <div class="samples-panel" id="sample-medical" role="tabpanel">
+                <div class="sample-doc-frame">
+                    <div class="sample-doc-top">
+                        <span class="sample-doc-type-label">Dossier médical — Medical Record</span>
+                        <span class="sample-doc-badge">Certified · FR → EN</span>
+                    </div>
+                    <div class="sample-doc-split">
+                        <div class="sample-doc-col">
+                            <div class="sample-col-lang">Original — Français</div>
+                            <div class="sample-img-box">
+                                <div class="sample-img-box-icon"></div>
+                                <span>Document à insérer</span>
+                            </div>
+                            <div class="sk w-full"></div>
+                            <div class="sk w-6"></div>
+                            <div class="sk w-8"></div>
+                            <div class="sk w-full"></div>
+                            <div class="sk w-3"></div>
+                        </div>
+                        <div class="sample-doc-col">
+                            <div class="sample-col-lang">Translation — English</div>
+                            <div class="sample-img-box">
+                                <div class="sample-img-box-icon"></div>
+                                <span>Sample to be added</span>
+                            </div>
+                            <div class="sk w-4"></div>
+                            <div class="sk w-full"></div>
+                            <div class="sk w-8"></div>
+                            <div class="sk w-6"></div>
+                            <div class="sk w-full"></div>
+                        </div>
+                    </div>
+                    <div class="sample-cert-strip">
+                        <span class="sample-cert-check">✓</span>
+                        <span class="sample-cert-text">Includes signed certification statement of accuracy &amp;
+                            completeness</span>
+                    </div>
+                </div>
+                <div class="sample-info">
+                    <div>
+                        <div class="sample-info-kicker">Document type</div>
+                        <div class="sample-info-title">Medical Record</div>
+                        <div class="sample-info-fr">Dossier médical / Certificat médical · Établissement de santé</div>
+                    </div>
+                    <p class="sample-info-desc">French medical records, physician letters, and hospital summaries
+                        require translation by someone fluent in clinical terminology in both languages — not just
+                        general language fluency. Certified translations are accepted for USCIS medical examination
+                        submissions and healthcare provider review.</p>
+                    <div>
+                        <div class="sample-uses-label">Commonly submitted to</div>
+                        <div class="sample-uses">
+                            <div class="sample-use-row">USCIS Form I-693 medical submission</div>
+                            <div class="sample-use-row">US physicians and specialists</div>
+                            <div class="sample-use-row">Health insurance claims</div>
+                            <div class="sample-use-row">Disability and benefits applications</div>
+                        </div>
+                    </div>
+                    <div class="sample-placeholder-note">
+                        <strong>Placeholder</strong>
+                        A certified translation sample will be placed here. The document layout shown reflects Meliora's
+                        standard bilingual certified format.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
 
     <!-- CONFIDENTIALITY -->
     <section class="conf-sec" aria-labelledby="conf-h2">
@@ -3059,7 +3905,9 @@
                     <h2 id="creds-h2">Qualified, verified,<br><em>and independently recognised</em></h2>
                 </div>
                 <div class="creds-header-right">
-                    Meliora's qualifications aren't self-issued. The credential comes from the French government. The professional membership is the leading body for translators in the US. And the coverage spans 29+ Francophone countries.
+                    Meliora's qualifications aren't self-issued. The credential comes from the French government. The
+                    professional membership is the leading body for translators in the US. And the coverage spans 29+
+                    Francophone countries.
                 </div>
             </div>
             <div class="proof-band reveal" style="transition-delay:.08s">
@@ -3100,14 +3948,20 @@
                         <span class="reviews-rating-text">5.0 · All reviews on Google</span>
                     </div>
                     <div class="reviews-google-link">
-                        <a href="https://www.google.com/search?q=Meliora+Translation+Services+reviews" target="_blank" rel="noopener">Read all reviews on Google ↗</a>
+                        <a href="https://www.google.com/search?q=Meliora+Translation+Services+reviews" target="_blank"
+                            rel="noopener">Read all reviews on Google ↗</a>
                     </div>
                 </div>
             </div>
 
             <!-- Featured pull quote -->
             <div class="review-featured reveal" style="transition-delay:.05s">
-                <p class="review-featured-text">"Ms. Gaines is an exceptionally adept translator who will provide a translation that is accurate and <em>maintains the same meaning across languages.</em> Furthermore, she is quick and responsive to your questions and concerns, always clearly communicating her fees and her decisions in her translations. I would recommend anyone in need of French translations of documents for applications to French Universities to choose Ms. Gaines. You will not be disappointed!"</p>
+                <p class="review-featured-text">"Ms. Gaines is an exceptionally adept translator who will provide a
+                    translation that is accurate and <em>maintains the same meaning across languages.</em> Furthermore,
+                    she is quick and responsive to your questions and concerns, always clearly communicating her fees
+                    and her decisions in her translations. I would recommend anyone in need of French translations of
+                    documents for applications to French Universities to choose Ms. Gaines. You will not be
+                    disappointed!"</p>
                 <div class="review-featured-footer">
                     <div class="review-stars">★★★★★</div>
                     <div class="review-featured-divider"></div>
@@ -3125,7 +3979,10 @@
                         <div class="review-stars">★★★★★</div>
                         <span class="review-source-badge">Google</span>
                     </div>
-                    <p class="review-text">"Her deep understanding of cultural nuances in languages showed through in her ability to translate my texts in such a manner that the essence of what I was trying to communicate was not lost in translation. Also, her openness and communicative attitude made working with her on this project an absolute joy."</p>
+                    <p class="review-text">"Her deep understanding of cultural nuances in languages showed through in
+                        her ability to translate my texts in such a manner that the essence of what I was trying to
+                        communicate was not lost in translation. Also, her openness and communicative attitude made
+                        working with her on this project an absolute joy."</p>
                     <div class="review-footer">
                         <div class="review-initial">K</div>
                         <div class="review-attr-wrap">
@@ -3139,7 +3996,10 @@
                         <div class="review-stars">★★★★★</div>
                         <span class="review-source-badge">Google</span>
                     </div>
-                    <p class="review-text">"Nene's understanding of the context as well as her ability to provide the translation within hours of my request was critical to meeting my needs. I needed an accurate translation of legal materials from government organizations overseas. I will be using her services again."</p>
+                    <p class="review-text">"Nene's understanding of the context as well as her ability to provide the
+                        translation within hours of my request was critical to meeting my needs. I needed an accurate
+                        translation of legal materials from government organizations overseas. I will be using her
+                        services again."</p>
                     <div class="review-footer">
                         <div class="review-initial">E</div>
                         <div class="review-attr-wrap">
@@ -3153,7 +4013,9 @@
                         <div class="review-stars">★★★★★</div>
                         <span class="review-source-badge">Google</span>
                     </div>
-                    <p class="review-text">"I recently used the services of Meliora Translation Services at an immigration interview. Ms. Gaines provided excellent translation during the hour long interview in English and French. I will be using Meliora Translation Services again."</p>
+                    <p class="review-text">"I recently used the services of Meliora Translation Services at an
+                        immigration interview. Ms. Gaines provided excellent translation during the hour long interview
+                        in English and French. I will be using Meliora Translation Services again."</p>
                     <div class="review-footer">
                         <div class="review-initial">E</div>
                         <div class="review-attr-wrap">
@@ -3206,21 +4068,30 @@
                 <div class="faq-item reveal" style="transition-delay:.1s">
                     <details>
                         <summary>How much does French translation cost?</summary>
-                        <div class="faq-ans">There is no flat per-page rate — every project is quoted individually. Your price is based on five factors:
-                            <ul style="margin:.6rem 0 .2rem 1rem;display:flex;flex-direction:column;gap:.3rem;font-size:.85rem;line-height:1.6">
+                        <div class="faq-ans">There is no flat per-page rate — every project is quoted individually. Your
+                            price is based on five factors:
+                            <ul
+                                style="margin:.6rem 0 .2rem 1rem;display:flex;flex-direction:column;gap:.3rem;font-size:.85rem;line-height:1.6">
                                 <li><strong>Document length</strong> — word count or page count</li>
-                                <li><strong>Document type</strong> — legal, immigration, medical, real estate, business, or other</li>
-                                <li><strong>Certification</strong> — whether a signed certification statement is required</li>
+                                <li><strong>Document type</strong> — legal, immigration, medical, real estate, business,
+                                    or other</li>
+                                <li><strong>Certification</strong> — whether a signed certification statement is
+                                    required</li>
                                 <li><strong>Formatting</strong> — whether the layout must match the original</li>
                                 <li><strong>Deadline</strong> — standard or rush turnaround</li>
                             </ul>
-                            Request a free itemised quote to get an exact figure before you commit to anything.</div>
+                            Request a free itemised quote to get an exact figure before you commit to anything.
+                        </div>
                     </details>
                 </div>
                 <div class="faq-item reveal" style="transition-delay:.12s">
                     <details>
                         <summary>How long does French translation take?</summary>
-                        <div class="faq-ans">Turnaround depends on document length, complexity, and whether certification is required. As a general guide: short certified documents (1–2 pages) are often completed within 1–2 business days; longer or more complex documents take longer. Rush turnaround is available for urgent needs. Your exact timeline is always confirmed at the quote stage — before any work begins.</div>
+                        <div class="faq-ans">Turnaround depends on document length, complexity, and whether
+                            certification is required. As a general guide: short certified documents (1–2 pages) are
+                            often completed within 1–2 business days; longer or more complex documents take longer. Rush
+                            turnaround is available for urgent needs. Your exact timeline is always confirmed at the
+                            quote stage — before any work begins.</div>
                     </details>
                 </div>
                 <div class="faq-item reveal" style="transition-delay:.14s">
@@ -3251,7 +4122,12 @@
                 <div class="faq-item reveal" style="transition-delay:.2s">
                     <details>
                         <summary>What documents can you translate and certify from French to English?</summary>
-                        <div class="faq-ans">Meliora translates and certifies a wide range of French documents for official submission, including: birth, death, and marriage certificates; passports and national ID cards; immigration applications and supporting documents; court orders and legal decisions; academic transcripts and diplomas; medical records and physician letters; affidavits and sworn declarations; business incorporation and financial documents; contracts and legal agreements; and police clearance certificates.</div>
+                        <div class="faq-ans">Meliora translates and certifies a wide range of French documents for
+                            official submission, including: birth, death, and marriage certificates; passports and
+                            national ID cards; immigration applications and supporting documents; court orders and legal
+                            decisions; academic transcripts and diplomas; medical records and physician letters;
+                            affidavits and sworn declarations; business incorporation and financial documents; contracts
+                            and legal agreements; and police clearance certificates.</div>
                     </details>
                 </div>
             </div>
@@ -3296,6 +4172,21 @@
     </footer>
 
     <script>
+        // Sample translations tab switcher
+        function switchSample(btn, id) {
+            document.querySelectorAll('.sample-tab').forEach(t => {
+                t.classList.remove('active');
+                t.setAttribute('aria-selected', 'false');
+            });
+            document.querySelectorAll('.samples-panel').forEach(p => p.classList.remove('active'));
+            btn.classList.add('active');
+            btn.setAttribute('aria-selected', 'true');
+            const panel = document.getElementById('sample-' + id);
+            panel.classList.add('active');
+            // trigger reveal for newly visible panel
+            panel.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+        }
+
         // Scroll reveal
         const obs = new IntersectionObserver(entries => {
             entries.forEach(e => {
