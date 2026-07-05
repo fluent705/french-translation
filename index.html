@@ -786,139 +786,6 @@
             color: var(--forest);
         }
 
-        /* ── DOCUMENT TYPES ── */
-        .doc-sec {
-            background: var(--forest);
-            padding: clamp(4.5rem, 9vw, 7rem) 0;
-        }
-
-        .doc-layout {
-            display: grid;
-            grid-template-columns: 1fr 2.4fr;
-            gap: 5rem;
-            align-items: start;
-        }
-
-        .doc-intro h2 {
-            font-family: var(--f-display);
-            font-size: clamp(2rem, 3.2vw, 2.9rem);
-            font-weight: 500;
-            line-height: 1.08;
-            color: var(--white);
-            margin-bottom: 1rem;
-        }
-
-        .doc-intro h2 em {
-            font-style: italic;
-            color: var(--gold-mid);
-        }
-
-        .doc-intro p {
-            font-size: .92rem;
-            color: rgba(255, 255, 255, .44);
-            line-height: 1.8;
-            margin-bottom: 1.6rem;
-        }
-
-        .doc-intro-note {
-            display: inline-flex;
-            align-items: center;
-            gap: .5rem;
-            font-size: .68rem;
-            letter-spacing: .14em;
-            text-transform: uppercase;
-            color: var(--gold);
-            border-top: 1px solid rgba(154, 114, 53, .25);
-            padding-top: 1.2rem;
-            margin-top: .2rem;
-        }
-
-        .doc-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5px;
-            background: rgba(154, 114, 53, .14);
-        }
-
-        .doc-cat {
-            background: rgba(255, 255, 255, .03);
-            padding: 1.9rem 1.65rem;
-            transition: background .22s;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .doc-cat:hover {
-            background: rgba(255, 255, 255, .06);
-        }
-
-        .doc-cat-header {
-            display: flex;
-            flex-direction: column;
-            gap: .35rem;
-        }
-
-        .doc-cat-name {
-            font-size: .6rem;
-            letter-spacing: .2em;
-            text-transform: uppercase;
-            color: var(--gold-mid);
-            font-weight: 500;
-        }
-
-        .doc-cat-blurb {
-            font-size: .82rem;
-            color: rgba(255, 255, 255, .65);
-            line-height: 1.62;
-        }
-
-        .doc-cat-divider {
-            display: block;
-            width: 24px;
-            height: 1px;
-            background: rgba(154, 114, 53, .35);
-        }
-
-        .doc-cat ul {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: .28rem;
-        }
-
-        .doc-cat ul li {
-            font-size: .79rem;
-            color: rgba(255, 255, 255, .42);
-            padding-left: .85rem;
-            position: relative;
-            line-height: 1.5;
-        }
-
-        .doc-cat ul li::before {
-            content: '–';
-            position: absolute;
-            left: 0;
-            color: rgba(154, 114, 53, .55);
-        }
-
-        @media (max-width: 980px) {
-            .doc-layout {
-                grid-template-columns: 1fr;
-                gap: 2.5rem;
-            }
-
-            .doc-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        @media (max-width: 560px) {
-            .doc-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
         /* ── INTERPRETATION ── */
         .interp-sec {
             padding: clamp(5rem, 10vw, 8rem) 0;
@@ -943,6 +810,25 @@
         }
 
         .interp-sec h2 em {
+            font-style: italic;
+            color: var(--gold);
+        }
+
+        .interp-h2-hero {
+            margin-bottom: 1.5rem;
+        }
+
+        .interp-h2-main {
+            display: block;
+            font-size: clamp(2.6rem, 5vw, 4rem);
+            font-weight: 500;
+            font-style: italic;
+            color: var(--forest);
+            line-height: 1;
+            letter-spacing: -.01em;
+        }
+
+        .interp-h2-main em {
             font-style: italic;
             color: var(--gold);
         }
@@ -1311,84 +1197,6 @@
             }
         }
 
-        /* ── CONFIDENTIALITY ── */
-        .conf-sec {
-            background: var(--paper-deep);
-            padding: clamp(4.5rem, 9vw, 7rem) 0;
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
-        }
-
-        .conf-inner {
-            display: grid;
-            grid-template-columns: 1fr 1.5fr;
-            gap: 5rem;
-            align-items: center;
-        }
-
-        .conf-sec h2 {
-            font-family: var(--f-display);
-            font-size: clamp(2rem, 3.2vw, 2.8rem);
-            font-weight: 500;
-            line-height: 1.1;
-            color: var(--forest);
-            margin-bottom: 1.1rem;
-        }
-
-        .conf-sec h2 em {
-            font-style: italic;
-            color: var(--gold);
-        }
-
-        .conf-sec p {
-            font-size: .95rem;
-            color: var(--muted);
-            line-height: 1.82;
-            margin-bottom: 1rem;
-        }
-
-        .conf-cards {
-            display: flex;
-            flex-direction: column;
-            gap: .8rem;
-        }
-
-        .conf-card {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-            padding: 1.2rem 1.4rem;
-            background: var(--white);
-            border: 1px solid var(--border);
-        }
-
-        .conf-icon-wrap {
-            width: 36px;
-            height: 36px;
-            flex-shrink: 0;
-            border: 1px solid var(--border-mid);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .conf-icon {
-            font-size: .9rem;
-        }
-
-        .conf-card-title {
-            font-size: .84rem;
-            font-weight: 500;
-            color: var(--forest);
-            margin-bottom: .18rem;
-        }
-
-        .conf-card-desc {
-            font-size: .79rem;
-            color: var(--muted);
-            line-height: 1.6;
-        }
-
         /* ── PROCESS ── */
         .process-sec {
             padding: clamp(5rem, 10vw, 8rem) 0;
@@ -1469,6 +1277,22 @@
             font-size: .78rem;
             color: var(--muted);
             line-height: 1.65;
+        }
+
+        .process-security-note {
+            text-align: center;
+            max-width: 520px;
+            margin: 3rem auto 0;
+            padding-top: 1.6rem;
+            border-top: 1px solid var(--border);
+            font-size: .82rem;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        .process-security-note strong {
+            color: var(--gold);
+            font-weight: 500;
         }
 
         /* ── WHY MELIORA ── */
@@ -2253,7 +2077,6 @@
             .hero,
             .interp-inner,
             .about-inner,
-            .conf-inner,
             .pricing-inner,
             .cta-inner {
                 grid-template-columns: 1fr;
@@ -2325,7 +2148,6 @@
         @media (max-width:560px) {
 
             .svc-grid,
-            .doc-grid,
             .why-grid,
             .process-steps {
                 grid-template-columns: 1fr;
@@ -2961,120 +2783,18 @@
     </section>
 
     <!-- DOCUMENT TYPES -->
-    <section class="doc-sec" aria-labelledby="doc-h2">
-        <div class="wrap">
-            <div class="doc-layout">
-                <div class="doc-intro reveal">
-                    <h2 id="doc-h2">Every document type. <em>Every detail that matters.</em></h2>
-                    <p>Legal filings, immigration records, medical charts, closing packages — each one has a register, a
-                        weight, and a set of conventions that a generic translation will get wrong. These are the
-                        document types we handle every day.</p>
-                    <span class="doc-intro-note">Both directions — French ↔ English</span>
-                </div>
-                <div class="doc-grid reveal" style="transition-delay:.12s">
-                    <div class="doc-cat">
-                        <div class="doc-cat-header">
-                            <div class="doc-cat-name">Legal</div>
-                            <div class="doc-cat-blurb">Legal language has its own weight. Getting the terminology right
-                                isn't enough if the framing and formality are off.</div>
-                        </div>
-                        <span class="doc-cat-divider"></span>
-                        <ul>
-                            <li>Contracts &amp; agreements</li>
-                            <li>Court filings &amp; orders</li>
-                            <li>Affidavits &amp; declarations</li>
-                            <li>Judgments &amp; decisions</li>
-                            <li>Powers of attorney</li>
-                        </ul>
-                    </div>
-                    <div class="doc-cat">
-                        <div class="doc-cat-header">
-                            <div class="doc-cat-name">Immigration</div>
-                            <div class="doc-cat-blurb">USCIS requires certified translations under 8 CFR 103.2(b)(3).
-                                There's no room for ambiguity in a document that determines someone's status.</div>
-                        </div>
-                        <span class="doc-cat-divider"></span>
-                        <ul>
-                            <li>Passports &amp; national IDs</li>
-                            <li>Birth, marriage &amp; death certs</li>
-                            <li>Visa &amp; residency documents</li>
-                            <li>Police clearance certificates</li>
-                            <li>USCIS applications</li>
-                        </ul>
-                    </div>
-                    <div class="doc-cat">
-                        <div class="doc-cat-header">
-                            <div class="doc-cat-name">Medical</div>
-                            <div class="doc-cat-blurb">A mistranslated dosage or diagnosis isn't an editorial error.
-                                Medical documents are translated with the accuracy and sensitivity they require.</div>
-                        </div>
-                        <span class="doc-cat-divider"></span>
-                        <ul>
-                            <li>Patient records</li>
-                            <li>Discharge summaries</li>
-                            <li>Consent forms</li>
-                            <li>Lab &amp; diagnostic reports</li>
-                            <li>Pharmaceutical labels</li>
-                        </ul>
-                    </div>
-                    <div class="doc-cat">
-                        <div class="doc-cat-header">
-                            <div class="doc-cat-name">Real Estate</div>
-                            <div class="doc-cat-blurb">Cross-border transactions don't close cleanly on loose
-                                translations. Terminology matters — especially at the table.</div>
-                        </div>
-                        <span class="doc-cat-divider"></span>
-                        <ul>
-                            <li>Purchase agreements</li>
-                            <li>Title deeds</li>
-                            <li>Closing documents</li>
-                            <li>Lease agreements</li>
-                            <li>Property appraisals</li>
-                        </ul>
-                    </div>
-                    <div class="doc-cat">
-                        <div class="doc-cat-header">
-                            <div class="doc-cat-name">Business &amp; Financial</div>
-                            <div class="doc-cat-blurb">Financial structure and corporate language don't translate word
-                                for word. The MBA in Finance means the numbers and framing translate correctly.</div>
-                        </div>
-                        <span class="doc-cat-divider"></span>
-                        <ul>
-                            <li>Corporate filings</li>
-                            <li>Financial statements</li>
-                            <li>Business correspondence</li>
-                            <li>Board resolutions</li>
-                            <li>Partnership agreements</li>
-                        </ul>
-                    </div>
-                    <div class="doc-cat">
-                        <div class="doc-cat-header">
-                            <div class="doc-cat-name">Literary &amp; Marketing</div>
-                            <div class="doc-cat-blurb">Content that needs to land — not just transfer. Voice, tone, and
-                                intent are preserved, not sacrificed for a literal rendering.</div>
-                        </div>
-                        <span class="doc-cat-divider"></span>
-                        <ul>
-                            <li>Books &amp; manuscripts</li>
-                            <li>Website &amp; ad copy</li>
-                            <li>Brand content</li>
-                            <li>eBooks &amp; publications</li>
-                            <li>Press releases</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- INTERPRETATION -->
     <section class="interp-sec" aria-labelledby="interp-h2" id="interpretation">
         <div class="wrap">
             <div class="interp-inner">
                 <div class="reveal">
-                    <span class="eyebrow">Live French Interpretation</span>
+                    <span class="eyebrow">On-Site &middot; Phone &middot; Video</span>
                     <span class="rule"></span>
-                    <h2 id="interp-h2">When the words need<br>to land <em>right now</em></h2>
+                    <h2 id="interp-h2" class="interp-h2-hero">
+                        <span class="h1-dir">When the words need to land right now</span>
+                        <span class="h1-sep"></span>
+                        <span class="interp-h2-main"><em>Live French<br>Interpretation</em></span>
+                    </h2>
                     <p class="interp-body">Written translation gives you time. Interpretation doesn't. When someone's
                         immigration hearing, medical appointment, or deposition depends on what's said in the next
                         moment — the interpreter has to be completely fluent in both languages and both contexts. No
@@ -3292,11 +3012,6 @@
                     <span class="sample-tab-fr">Casier judiciaire</span>
                     <span class="sample-tab-en">Police Clearance</span>
                 </button>
-                <button class="sample-tab" role="tab" aria-selected="false" aria-controls="sample-medical"
-                    onclick="switchSample(this,'medical')">
-                    <span class="sample-tab-fr">Dossier médical</span>
-                    <span class="sample-tab-en">Medical Record</span>
-                </button>
             </div>
 
             <!-- ── Birth Certificate ── -->
@@ -3434,7 +3149,7 @@
             <div class="samples-panel" id="sample-diploma" role="tabpanel">
                 <div class="sample-doc-frame">
                     <div class="sample-doc-top">
-                        <span class="sample-doc-type-label">Diplôme / Relevé de notes — Diploma &amp; Transcript</span>
+                        <span class="sample-doc-type-label">Diplôme — Diploma</span>
                         <span class="sample-doc-badge">Certified · FR → EN</span>
                     </div>
                     <div class="sample-doc-split">
@@ -3472,13 +3187,15 @@
                 <div class="sample-info">
                     <div>
                         <div class="sample-info-kicker">Document type</div>
-                        <div class="sample-info-title">Diploma &amp; Academic Transcript</div>
-                        <div class="sample-info-fr">Diplôme / Relevé de notes · Établissement scolaire</div>
+                        <div class="sample-info-title">Diploma</div>
+                        <div class="sample-info-fr">Diplôme · Établissement scolaire</div>
                     </div>
-                    <p class="sample-info-desc">From the Baccalauréat to university diplomas, academic transcripts, and
-                        professional certificates — French academic credentials require certified translation for US
-                        school admission, credential evaluation, and professional licensing. Subject headings, grade
-                        scales, and institutional names are translated with precision.</p>
+                    <p class="sample-info-desc">From the Baccalauréat to university diplomas and professional
+                        certificates — French academic credentials require certified translation for US school
+                        admission, credential evaluation, and professional licensing. Institutional names, honors, and
+                        degree titles are translated with precision. Academic transcript translation is also offered;
+                        a transcript sample will be added once a fully redacted original is ready to display alongside
+                        its translation.</p>
                     <div>
                         <div class="sample-uses-label">Commonly submitted to</div>
                         <div class="sample-uses">
@@ -3629,136 +3346,9 @@
                 </div>
             </div>
 
-            <!-- ── Medical Record ── -->
-            <div class="samples-panel" id="sample-medical" role="tabpanel">
-                <div class="sample-doc-frame">
-                    <div class="sample-doc-top">
-                        <span class="sample-doc-type-label">Dossier médical — Medical Record</span>
-                        <span class="sample-doc-badge">Certified · FR → EN</span>
-                    </div>
-                    <div class="sample-doc-split">
-                        <div class="sample-doc-col">
-                            <div class="sample-col-lang">Original — Français</div>
-                            <div class="sample-img-box">
-                                <div class="sample-img-box-icon"></div>
-                                <span>Document à insérer</span>
-                            </div>
-                            <div class="sk w-full"></div>
-                            <div class="sk w-6"></div>
-                            <div class="sk w-8"></div>
-                            <div class="sk w-full"></div>
-                            <div class="sk w-3"></div>
-                        </div>
-                        <div class="sample-doc-col">
-                            <div class="sample-col-lang">Translation — English</div>
-                            <div class="sample-img-box">
-                                <div class="sample-img-box-icon"></div>
-                                <span>Sample to be added</span>
-                            </div>
-                            <div class="sk w-4"></div>
-                            <div class="sk w-full"></div>
-                            <div class="sk w-8"></div>
-                            <div class="sk w-6"></div>
-                            <div class="sk w-full"></div>
-                        </div>
-                    </div>
-                    <div class="sample-cert-strip">
-                        <span class="sample-cert-check">✓</span>
-                        <span class="sample-cert-text">Includes signed certification statement of accuracy &amp;
-                            completeness</span>
-                    </div>
-                </div>
-                <div class="sample-info">
-                    <div>
-                        <div class="sample-info-kicker">Document type</div>
-                        <div class="sample-info-title">Medical Record</div>
-                        <div class="sample-info-fr">Dossier médical / Certificat médical · Établissement de santé</div>
-                    </div>
-                    <p class="sample-info-desc">French medical records, physician letters, and hospital summaries
-                        require translation by someone fluent in clinical terminology in both languages — not just
-                        general language fluency. Certified translations are accepted for USCIS medical examination
-                        submissions and healthcare provider review.</p>
-                    <div>
-                        <div class="sample-uses-label">Commonly submitted to</div>
-                        <div class="sample-uses">
-                            <div class="sample-use-row">USCIS Form I-693 medical submission</div>
-                            <div class="sample-use-row">US physicians and specialists</div>
-                            <div class="sample-use-row">Health insurance claims</div>
-                            <div class="sample-use-row">Disability and benefits applications</div>
-                        </div>
-                    </div>
-                    <div class="sample-placeholder-note">
-                        <strong>Placeholder</strong>
-                        A certified translation sample will be placed here. The document layout shown reflects Meliora's
-                        standard bilingual certified format.
-                    </div>
-                </div>
-            </div>
-
         </div>
     </section>
 
-
-    <!-- CONFIDENTIALITY -->
-    <section class="conf-sec" aria-labelledby="conf-h2">
-        <div class="wrap">
-            <div class="conf-inner">
-                <div class="reveal">
-                    <span class="eyebrow">Your documents are safe</span>
-                    <span class="rule"></span>
-                    <h2 id="conf-h2">Strict <em>confidentiality</em> on every project</h2>
-                    <p>The documents you send for translation are often the most sensitive you own — immigration files,
-                        medical records, legal agreements. Every document received by Meliora is handled with strict
-                        confidentiality. Your materials are used solely to complete the translation and are never shared
-                        with third parties.</p>
-                </div>
-                <div class="reveal" style="transition-delay:.1s">
-                    <div class="conf-cards">
-                        <div class="conf-card">
-                            <div class="conf-icon-wrap">
-                                <div class="conf-icon">—</div>
-                            </div>
-                            <div>
-                                <div class="conf-card-title">Strict confidentiality, without exception</div>
-                                <div class="conf-card-desc">Your files are never shared with third parties. They are
-                                    used only to complete your translation and nothing else.</div>
-                            </div>
-                        </div>
-                        <div class="conf-card">
-                            <div class="conf-icon-wrap">
-                                <div class="conf-icon">—</div>
-                            </div>
-                            <div>
-                                <div class="conf-card-title">NDA available on request</div>
-                                <div class="conf-card-desc">For sensitive corporate, legal, or medical projects, a
-                                    non-disclosure agreement is available. Ask at the quote stage.</div>
-                            </div>
-                        </div>
-                        <div class="conf-card">
-                            <div class="conf-icon-wrap">
-                                <div class="conf-icon">—</div>
-                            </div>
-                            <div>
-                                <div class="conf-card-title">Secure document transfer</div>
-                                <div class="conf-card-desc">Documents can be submitted and returned by encrypted email,
-                                    secure file transfer, or hard copy — your preference.</div>
-                            </div>
-                        </div>
-                        <div class="conf-card">
-                            <div class="conf-icon-wrap">
-                                <div class="conf-icon">—</div>
-                            </div>
-                            <div>
-                                <div class="conf-card-title">Files deleted after delivery</div>
-                                <div class="conf-card-desc">Once your translation is complete and delivered, your
-                                    original documents are deleted from working files on request.</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- PROCESS -->
     <section class="process-sec" aria-labelledby="process-h2">
@@ -3794,6 +3384,8 @@
                         courts, schools, or wherever it needs to go.</p>
                 </div>
             </div>
+            <p class="process-security-note reveal" style="transition-delay:.4s">Every document is handled with strict
+                confidentiality from start to finish — <strong>NDA available upon request.</strong></p>
         </div>
     </section>
 
